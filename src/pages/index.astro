@@ -1,11 +1,94 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+// Aquí va la lógica si la necesitas, por ahora vacío
 ---
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Oficinas Virtuales Guatemala | Planes y Precios</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f4f7f6; }
+        header { background: #1a365d; color: white; padding: 2rem; text-align: center; }
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 1rem; }
+        
+        /* Contenedor de Tarjetas */
+        .pricing-grid { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+        
+        /* Estilo de cada Tarjeta */
+        .card { 
+            background: white; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1); 
+            padding: 2rem; 
+            width: 300px; 
+            text-align: center; 
+            border-top: 5px solid #3182ce;
+        }
+        .card h3 { color: #2d3748; margin-top: 0; }
+        .price { font-size: 2rem; font-weight: bold; color: #1a365d; margin: 1rem 0; }
+        .price span { font-size: 1rem; color: #718096; }
+        
+        ul { list-style: none; padding: 0; margin: 1.5rem 0; text-align: left; }
+        li { margin-bottom: 0.5rem; color: #4a5568; }
+        li::before { content: "✓ "; color: #38a169; font-weight: bold; }
 
-<Layout>
-	<Welcome />
-</Layout>
+        .btn { 
+            display: inline-block; 
+            background: #3182ce; 
+            color: white; 
+            padding: 0.8rem 1.5rem; 
+            text-decoration: none; 
+            border-radius: 5px; 
+            font-weight: bold; 
+        }
+        .btn:hover { background: #2b6cb0; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Planes de Oficina Virtual</h1>
+        <p>La mejor imagen corporativa para tu empresa en Guatemala</p>
+    </header>
+
+    <div class="container">
+        <div class="pricing-grid">
+            
+            <div class="card">
+                <h3>Plan Emprendedor</h3>
+                <div class="price">Q250 <span>/mes</span></div>
+                <ul>
+                    <li>Dirección Comercial</li>
+                    <li>Manejo de Correspondencia</li>
+                    <li>Uso de marca en tarjetas</li>
+                </ul>
+                <a href="#" class="btn">Contratar</a>
+            </div>
+
+            <div class="card" style="border-top-color: #e53e3e;">
+                <h3>Plan Fiscal (SAT)</h3>
+                <div class="price">Q450 <span>/mes</span></div>
+                <ul>
+                    <li><strong>Dirección Fiscal SAT</strong></li>
+                    <li>Patente de Comercio</li>
+                    <li>Recepción de notificaciones</li>
+                </ul>
+                <a href="#" class="btn">Contratar</a>
+            </div>
+
+            <div class="card">
+                <h3>Plan Premium</h3>
+                <div class="price">Q750 <span>/mes</span></div>
+                <ul>
+                    <li>Todo lo del Plan Fiscal</li>
+                    <li>8 horas de Sala de Reuniones</li>
+                    <li>Contestación telefónica</li>
+                </ul>
+                <a href="#" class="btn">Contratar</a>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
