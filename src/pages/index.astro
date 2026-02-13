@@ -1,5 +1,5 @@
 ---
-// index.astro - Versión Ultra-Optimizada (Zero Reflow)
+// index.astro - Versión Ultra-Optimizada (4 Planes + Fix Tag)
 ---
 <!DOCTYPE html>
 <html lang="es">
@@ -10,7 +10,6 @@
     <meta name="description" content="Oficinas virtuales de lujo en Guatemala Zonas 10 y 14. Dirección fiscal para SAT, inscripción de sociedades y servicios legales desde Q250.">
     
     <style is:inline>
-        /* Mitigación de Reflow: Fuentes del sistema primero */
         :root {
             --navy: #0f172a;
             --accent: #1d4ed8; 
@@ -20,10 +19,9 @@
             --success: #15803d;
         }
 
-        /* font-display: swap evita el salto de texto */
         body { 
             margin: 0; 
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: var(--light); 
             color: var(--navy); 
             line-height: 1.6;
@@ -43,7 +41,6 @@
         section { padding: 90px 0; }
         .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
         
-        /* Reservar espacio para evitar Reflow */
         .img-container { 
             background: #e2e8f0; 
             border-radius: 24px; 
@@ -54,14 +51,46 @@
         }
         .img-container img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px; }
-        .price-card { background: var(--white); padding: 50px 35px; border-radius: 24px; text-align: center; transition: transform 0.3s ease; border: 1px solid #e2e8f0; contain: content; }
-        .price-card:hover { transform: translateY(-15px); }
-        .price-card.featured { border: 2.5px solid var(--accent); position: relative; }
-        .featured-tag { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--navy); color: #ffffff; padding: 6px 20px; border-radius: 50px; font-size: 0.75rem; font-weight: 800; }
+        /* Pricing Grid con Fix de Espaciado para el Tag */
+        .pricing-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
+            gap: 40px 25px; 
+            margin-top: 70px; /* Aumentado para que el tag respire */
+        }
+        .price-card { 
+            background: var(--white); 
+            padding: 50px 30px; 
+            border-radius: 24px; 
+            text-align: center; 
+            transition: transform 0.3s ease; 
+            border: 1px solid #e2e8f0; 
+            position: relative; /* Importante para el tag */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .price-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
         
-        .amount { font-size: 3.5rem; font-weight: 800; color: var(--navy); margin: 20px 0; }
-        .amount span { font-size: 1rem; color: var(--slate); font-weight: 600; }
+        /* Fix Tag: Ajuste de posición y visibilidad */
+        .price-card.featured { border: 2.5px solid var(--accent); z-index: 10; }
+        .featured-tag { 
+            position: absolute; 
+            top: -18px; 
+            left: 50%; 
+            transform: translateX(-50%); 
+            background: var(--navy); 
+            color: #ffffff; 
+            padding: 8px 24px; 
+            border-radius: 50px; 
+            font-size: 0.75rem; 
+            font-weight: 800; 
+            white-space: nowrap;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .amount { font-size: 3rem; font-weight: 800; color: var(--navy); margin: 15px 0; }
+        .amount span { font-size: 0.9rem; color: var(--slate); font-weight: 600; }
 
         .seo-section { background: var(--navy); color: white; padding: 80px 40px; border-radius: 32px; margin-top: 40px; }
         .seo-section h2 { color: #60a5fa; border-left: 4px solid #60a5fa; padding-left: 20px; text-align: left; }
@@ -69,14 +98,13 @@
         .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-top: 40px; }
         .gallery-item { border-radius: 16px; overflow: hidden; aspect-ratio: 16 / 10; }
 
-        .btn { display: inline-block; background: var(--accent); color: #ffffff; padding: 18px 40px; border-radius: 12px; text-decoration: none; font-weight: 700; transition: 0.3s; margin-top: 25px; border: none; min-width: 200px; text-align: center; }
+        .btn { display: inline-block; background: var(--accent); color: #ffffff; padding: 16px 30px; border-radius: 12px; text-decoration: none; font-weight: 700; transition: 0.3s; margin-top: 20px; border: none; text-align: center; }
         .btn:hover { background: var(--navy); }
         
         footer { background: var(--navy); color: #e2e8f0; padding: 60px 20px; text-align: center; }
+        .wa-float { position: fixed; bottom: 35px; right: 35px; background: var(--success); width: 65px; height: 65px; border-radius: 20px; display: flex; align-items: center; justify-content: center; color: white; z-index: 2000; text-decoration: none; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
 
-        .wa-float { position: fixed; bottom: 35px; right: 35px; background: var(--success); width: 65px; height: 65px; border-radius: 20px; display: flex; align-items: center; justify-content: center; color: white; z-index: 2000; text-decoration: none; }
-
-        @media (max-width: 768px) { .grid-2 { grid-template-columns: 1fr; } h1 { font-size: 2.5rem !important; } }
+        @media (max-width: 768px) { .grid-2 { grid-template-columns: 1fr; } h1 { font-size: 2.3rem !important; } .pricing-grid { margin-top: 50px; } }
     </style>
 </head>
 <body>
@@ -117,23 +145,40 @@
             <h2 style="text-align:center;">Soluciones de Domicilio Legal</h2>
             <div class="pricing-grid">
                 <div class="price-card">
-                    <h3>Comercial</h3>
-                    <div class="amount">Q250<span>/mes</span></div>
-                    <p>Ideal para startups que buscan imagen profesional y manejo de paquetería.</p>
-                    <a href="https://wa.me/50223022200" class="btn" style="background:var(--navy); width:80%;">Elegir Plan</a>
+                    <div>
+                        <h3>Comercial</h3>
+                        <div class="amount">Q250<span>/mes</span></div>
+                        <p>Ideal para startups que buscan imagen profesional y manejo de paquetería.</p>
+                    </div>
+                    <a href="https://wa.me/50223022200" class="btn" style="background:var(--navy);">Elegir Plan</a>
                 </div>
+
                 <div class="price-card featured">
                     <div class="featured-tag">MÁS SOLICITADO</div>
-                    <h3>Fiscal (SAT)</h3>
-                    <div class="amount">Q450<span>/mes</span></div>
-                    <p>Todo lo necesario para su <strong>patente de comercio</strong> y registro fiscal oficial.</p>
-                    <a href="https://wa.me/50223022200" class="btn" style="width:80%;">Elegir Plan</a>
+                    <div>
+                        <h3>Fiscal (SAT)</h3>
+                        <div class="amount">Q450<span>/mes</span></div>
+                        <p>Todo lo necesario para su <strong>patente de comercio</strong> y registro fiscal oficial.</p>
+                    </div>
+                    <a href="https://wa.me/50223022200" class="btn">Elegir Plan</a>
                 </div>
+
                 <div class="price-card">
-                    <h3>Corporativo</h3>
-                    <div class="amount">Q750<span>/mes</span></div>
-                    <p>Servicio integral con acceso a salas de reuniones y atención personalizada.</p>
-                    <a href="https://wa.me/50223022200" class="btn" style="background:var(--navy); width:80%;">Elegir Plan</a>
+                    <div>
+                        <h3>Emprendedor Plus</h3>
+                        <div class="amount">Q550<span>/mes</span></div>
+                        <p>Incluye dirección fiscal y 5 horas de uso de sala de juntas al mes.</p>
+                    </div>
+                    <a href="https://wa.me/50223022200" class="btn" style="background:var(--navy);">Elegir Plan</a>
+                </div>
+
+                <div class="price-card">
+                    <div>
+                        <h3>Corporativo</h3>
+                        <div class="amount">Q750<span>/mes</span></div>
+                        <p>Servicio integral premium con acceso ilimitado a áreas comunes y atención VIP.</p>
+                    </div>
+                    <a href="https://wa.me/50223022200" class="btn" style="background:var(--navy);">Elegir Plan</a>
                 </div>
             </div>
         </section>
