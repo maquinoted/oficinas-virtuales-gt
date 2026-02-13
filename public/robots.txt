@@ -1,0 +1,6 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Indica a los buscadores dónde está tu sitemap (ajusta si tu dominio cambia)
+Sitemap: https://oficinasvirtualesguatemala.com/sitemap-index.xml
