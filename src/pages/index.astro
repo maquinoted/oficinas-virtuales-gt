@@ -22,26 +22,81 @@
               "@id": "https://oficinasvirtualesguatemala.com/#webpage",
               "url": "https://oficinasvirtualesguatemala.com/",
               "name": "Oficinas Virtuales en Guatemala | Dirección Fiscal y Comercial",
+              "description": "Servicios de oficina virtual y domicilio fiscal actualizados para febrero 2026 en Guatemala.",
               "datePublished": "2024-01-01T08:00:00+00:00",
               "dateModified": "2026-02-13T12:00:00+00:00",
-              "description": "Servicios de oficina virtual y domicilio fiscal actualizados para febrero 2026 en Guatemala."
+              "breadcrumb": { "@id": "https://oficinasvirtualesguatemala.com/#breadcrumb" }
             },
             {
               "@type": "LocalBusiness",
+              "@id": "https://oficinasvirtualesguatemala.com/#localbusiness",
               "name": "Oficinas Virtuales Guatemala",
               "image": "https://images.unsplash.com/photo-1497366216548-37526070297c",
+              "telephone": "+50223022200",
+              "url": "https://oficinasvirtualesguatemala.com/",
+              "priceRange": "Q250 - Q750",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Zona 10 y Zona 14",
+                "streetAddress": "Zona Pradera, Torre 2, oficina 1108",
                 "addressLocality": "Ciudad de Guatemala",
+                "addressRegion": "Guatemala",
                 "addressCountry": "GT"
               },
-              "priceRange": "Q250 - Q750",
-              "telephone": "+50223022200",
-              "url": "https://oficinasvirtualesguatemala.com/"
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 14.5975,
+                "longitude": -90.4958
+              },
+              "openingHoursSpecification": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "08:00",
+                "closes": "18:00"
+              }
+            },
+            {
+              "@type": "Service",
+              "serviceType": "Oficina Virtual",
+              "provider": { "@id": "https://oficinasvirtualesguatemala.com/#localbusiness" },
+              "areaServed": { "@type": "Country", "name": "Guatemala" },
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Planes de Oficina Virtual",
+                "itemListElement": [
+                  {
+                    "@type": "Offer",
+                    "itemOffered": { "@type": "Service", "name": "Plan Comercial" },
+                    "price": "250.00",
+                    "priceCurrency": "GTQ",
+                    "description": "Ideal para startups que buscan imagen profesional y manejo de paquetería."
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": { "@type": "Service", "name": "Profesional Pro" },
+                    "price": "375.00",
+                    "priceCurrency": "GTQ",
+                    "description": "Dirección fiscal y comercial, 8 horas de sala de reuniones y número PBX."
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": { "@type": "Service", "name": "Empresarial Global" },
+                    "price": "450.00",
+                    "priceCurrency": "GTQ",
+                    "description": "20 horas de sala, App móvil para llamadas salientes y 100 minutos incluidos."
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": { "@type": "Service", "name": "Corporativo VIP" },
+                    "price": "750.00",
+                    "priceCurrency": "GTQ",
+                    "description": "30 horas de sala, 200 minutos de llamadas y sistema CRM para gestión de clientes."
+                  }
+                ]
+              }
             },
             {
               "@type": "FAQPage",
+              "@id": "https://oficinasvirtualesguatemala.com/#faq",
               "mainEntity": [
                 {
                   "@type": "Question",
@@ -56,7 +111,7 @@
                   "name": "¿Incluye dirección fiscal para la SAT?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Sí, nuestros planes Fiscal y Corporativo incluyen dirección física avalada para inscripción de sociedades y actualización de RTU."
+                    "text": "Sí, nuestros planes incluyen dirección física avalada para inscripción de sociedades y actualización de RTU."
                   }
                 },
                 {
@@ -64,47 +119,7 @@
                   "name": "¿En qué zonas de Guatemala ofrecen dirección comercial?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Contamos con ubicaciones premium en Zona 10 (Área Pradera) y Zona 14, las áreas de mayor prestigio corporativo en la Ciudad de Guatemala."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "¿Puedo recibir paquetería en mi oficina virtual?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Sí, todos nuestros planes incluyen la recepción y custodia de correspondencia y paquetería de forma profesional."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "¿Cuánto tiempo toma el proceso de contratación?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "El proceso es inmediato. Una vez firmada la papelería y realizado el pago, puede utilizar su dirección fiscal el mismo día."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "¿Cómo ayuda una oficina virtual a la inscripción de mi sociedad?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Proporcionamos el contrato de arrendamiento necesario para que su abogado realice la inscripción ante el Registro Mercantil y la SAT sin usar su dirección personal."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "¿Tienen salas de reuniones disponibles?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Sí, el plan Emprendedor Plus y Corporativo incluyen horas mensuales de uso de salas de juntas equipadas para sus reuniones de negocios."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "¿Puedo cambiar de plan en cualquier momento?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Totalmente. Puede subir o bajar de plan según las necesidades de crecimiento de su empresa sin penalizaciones."
+                    "text": "Contamos con ubicaciones premium en Zona 10 (Edificio Zona Pradera) y Zona 14, las áreas de mayor prestigio corporativo."
                   }
                 },
                 {
@@ -112,35 +127,23 @@
                   "name": "¿Es legal una oficina virtual ante la SAT?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Es 100% legal. La normativa guatemalteca permite el uso de domicilios fiscales arrendados siempre que cuenten con el respaldo documental que nosotros brindamos."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "¿Tienen atención de llamadas personalizadas?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Sí, nuestro plan Corporativo incluye el servicio de recepción telefónica profesional para proyectar una imagen sólida a sus clientes."
+                    "text": "Es 100% legal. La normativa permite el uso de domicilios fiscales arrendados siempre que cuenten con el respaldo documental que brindamos."
                   }
                 }
               ]
             },
             {
               "@type": "BreadcrumbList",
+              "@id": "https://oficinasvirtualesguatemala.com/#breadcrumb",
               "itemListElement": [
                 { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://oficinasvirtualesguatemala.com/" },
-                { "@type": "ListItem", "position": 2, "name": "Servicios en Guatemala", "item": "https://oficinasvirtualesguatemala.com/#servicios" },
-                { "@type": "ListItem", "position": 3, "name": "Oficinas Virtuales", "item": "https://oficinasvirtualesguatemala.com/#planes" },
-                { "@type": "ListItem", "position": 4, "name": "Dirección Fiscal SAT", "item": "https://oficinasvirtualesguatemala.com/" },
-                { "@type": "ListItem", "position": 5, "name": "Domicilio Comercial Zona 10", "item": "https://oficinasvirtualesguatemala.com/" },
-                { "@type": "ListItem", "position": 6, "name": "Inscripción de Sociedades", "item": "https://oficinasvirtualesguatemala.com/" },
-                { "@type": "ListItem", "position": 7, "name": "Planes Emprendedores", "item": "https://oficinasvirtualesguatemala.com/#planes" },
-                { "@type": "ListItem", "position": 8, "name": "Precios y Cotización", "item": "https://oficinasvirtualesguatemala.com/#planes" }
+                { "@type": "ListItem", "position": 2, "name": "Servicios", "item": "https://oficinasvirtualesguatemala.com/#servicios" },
+                { "@type": "ListItem", "position": 3, "name": "Planes y Precios", "item": "https://oficinasvirtualesguatemala.com/#planes" }
               ]
             }
           ]
         }
-    </script>
+        </script>
     
     <style is:inline>
         :root {
