@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>¡Mensaje Recibido! | Oficinas Virtuales Guatemala</title>
+    <meta name="robots" content="noindex"> <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy: #0f172a;
+            --blue: #1d4ed8;
+            --slate: #475569;
+            --white: #ffffff;
+            --bg: #f8fafc;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            color: var(--navy);
+        }
+        .card {
+            background: var(--white);
+            max-width: 500px;
+            width: 90%;
+            padding: 40px;
+            border-radius: 32px;
+            text-align: center;
+            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+        }
+        .icon-check {
+            width: 80px;
+            height: 80px;
+            background: #dcfce7;
+            color: #166534;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            margin: 0 auto 20px;
+        }
+        h1 { font-size: 2rem; margin-bottom: 10px; color: var(--navy); }
+        p { color: var(--slate); line-height: 1.6; margin-bottom: 30px; }
+        
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .btn {
+            padding: 16px 24px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+        .btn-primary {
+            background: var(--blue);
+            color: white;
+        }
+        .btn-primary:hover { opacity: 0.9; transform: translateY(-2px); }
+        
+        .btn-outline {
+            background: transparent;
+            border: 1px solid #cbd5e1;
+            color: var(--slate);
+        }
+        .btn-outline:hover { background: #f1f5f9; }
+
+        .whatsapp-fast {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            color: #16a34a;
+            font-weight: 600;
+            margin-top: 20px;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="icon-check">✓</div>
+        <h1>¡Todo listo!</h1>
+        <p>Hemos recibido su solicitud. Un asesor especializado en <strong>Zona Pradera</strong> le contactará en los próximos 15 minutos (en horario hábil).</p>
+
+        <div class="btn-group">
+            <a href="/" class="btn btn-primary">Volver al Inicio</a>
+            <a href="https://wa.me/50223022200?text=Acabo%20de%20enviar%20un%20formulario%20y%20me%20gustaría%20atención%20inmediata" class="btn btn-outline">Escribir por WhatsApp ahora</a>
+        </div>
+
+        <a href="https://wa.me/50223022200" class="whatsapp-fast">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.438 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+            ¿Tiene prisa? Clic aquí
+        </a>
+    </div>
+
+</body>
+</html>
