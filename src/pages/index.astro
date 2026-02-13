@@ -32,7 +32,7 @@
               "image": "https://images.unsplash.com/photo-1497366216548-37526070297c",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Zona Pradera, Torre 2, oficina 1108",
+                "streetAddress": "Zona 10 y Zona 14",
                 "addressLocality": "Ciudad de Guatemala",
                 "addressCountry": "GT"
               },
@@ -53,12 +53,89 @@
                 },
                 {
                   "@type": "Question",
+                  "name": "¿Incluye dirección fiscal para la SAT?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sí, nuestros planes Fiscal y Corporativo incluyen dirección física avalada para inscripción de sociedades y actualización de RTU."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "¿En qué zonas de Guatemala ofrecen dirección comercial?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Contamos con ubicaciones premium en Zona 10 (Área Pradera) y Zona 14, las áreas de mayor prestigio corporativo en la Ciudad de Guatemala."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "¿Puedo recibir paquetería en mi oficina virtual?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sí, todos nuestros planes incluyen la recepción y custodia de correspondencia y paquetería de forma profesional."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "¿Cuánto tiempo toma el proceso de contratación?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "El proceso es inmediato. Una vez firmada la papelería y realizado el pago, puede utilizar su dirección fiscal el mismo día."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "¿Cómo ayuda una oficina virtual a la inscripción de mi sociedad?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Proporcionamos el contrato de arrendamiento necesario para que su abogado realice la inscripción ante el Registro Mercantil y la SAT sin usar su dirección personal."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "¿Tienen salas de reuniones disponibles?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sí, el plan Emprendedor Plus y Corporativo incluyen horas mensuales de uso de salas de juntas equipadas para sus reuniones de negocios."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "¿Puedo cambiar de plan en cualquier momento?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Totalmente. Puede subir o bajar de plan según las necesidades de crecimiento de su empresa sin penalizaciones."
+                  }
+                },
+                {
+                  "@type": "Question",
                   "name": "¿Es legal una oficina virtual ante la SAT?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Es 100% legal. La normativa guatemalteca permite el uso de domicilios fiscales arrendados siempre que cuenten con el respaldo documental que brindamos."
+                    "text": "Es 100% legal. La normativa guatemalteca permite el uso de domicilios fiscales arrendados siempre que cuenten con el respaldo documental que nosotros brindamos."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "¿Tienen atención de llamadas personalizadas?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sí, nuestro plan Corporativo incluye el servicio de recepción telefónica profesional para proyectar una imagen sólida a sus clientes."
                   }
                 }
+              ]
+            },
+            {
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://oficinasvirtualesguatemala.com/" },
+                { "@type": "ListItem", "position": 2, "name": "Servicios en Guatemala", "item": "https://oficinasvirtualesguatemala.com/#servicios" },
+                { "@type": "ListItem", "position": 3, "name": "Oficinas Virtuales", "item": "https://oficinasvirtualesguatemala.com/#planes" },
+                { "@type": "ListItem", "position": 4, "name": "Dirección Fiscal SAT", "item": "https://oficinasvirtualesguatemala.com/" },
+                { "@type": "ListItem", "position": 5, "name": "Domicilio Comercial Zona 10", "item": "https://oficinasvirtualesguatemala.com/" },
+                { "@type": "ListItem", "position": 6, "name": "Inscripción de Sociedades", "item": "https://oficinasvirtualesguatemala.com/" },
+                { "@type": "ListItem", "position": 7, "name": "Planes Emprendedores", "item": "https://oficinasvirtualesguatemala.com/#planes" },
+                { "@type": "ListItem", "position": 8, "name": "Precios y Cotización", "item": "https://oficinasvirtualesguatemala.com/#planes" }
               ]
             }
           ]
@@ -68,7 +145,7 @@
     <style is:inline>
         :root {
             --navy: #0f172a; --accent: #1d4ed8; --slate: #475569; 
-            --light: #f8fafc; --white: #ffffff; --success: #15803d; --teal: #00a896;
+            --light: #f8fafc; --white: #ffffff; --success: #15803d;
         }
 
         body { 
@@ -91,25 +168,21 @@
         .img-container { background: #e2e8f0; border-radius: 24px; overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15); aspect-ratio: 3 / 2; }
         .img-container img { width: 100%; height: 100%; object-fit: cover; }
 
-        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px 25px; margin-top: 70px; }
-        .price-card { background: var(--white); padding: 40px 25px; border-radius: 24px; text-align: left; transition: 0.3s; border: 1px solid #e2e8f0; position: relative; display: flex; flex-direction: column; }
-        .price-card h3 { color: var(--teal); font-size: 1.5rem; margin-top: 0; text-align: center; }
-        .price-card.featured { border: 2.5px solid var(--teal); z-index: 10; }
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 40px 25px; margin-top: 70px; }
+        .price-card { background: var(--white); padding: 50px 30px; border-radius: 24px; text-align: center; transition: 0.3s; border: 1px solid #e2e8f0; position: relative; display: flex; flex-direction: column; justify-content: space-between; }
+        .price-card.featured { border: 2.5px solid var(--accent); z-index: 10; }
+        .featured-tag { position: absolute; top: -18px; left: 50%; transform: translateX(-50%); background: var(--navy); color: white; padding: 8px 24px; border-radius: 50px; font-size: 0.75rem; font-weight: 800; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
         
-        .amount { font-size: 1.8rem; font-weight: 800; color: var(--accent); margin: 20px 0; text-align: center; }
+        .amount { font-size: 3rem; font-weight: 800; color: var(--navy); margin: 15px 0; }
         .amount span { font-size: 0.9rem; color: var(--slate); }
 
-        .features-list { list-style: none; padding: 0; margin: 0; font-size: 0.95rem; }
-        .features-list li { margin-bottom: 12px; display: flex; align-items: flex-start; gap: 10px; }
-        
         .seo-section { background: var(--navy); color: white; padding: 80px 40px; border-radius: 32px; margin-top: 40px; }
         .seo-section h2 { color: #60a5fa; border-left: 4px solid #60a5fa; padding-left: 20px; text-align: left; margin-bottom: 20px; }
 
-        .btn { display: inline-block; background: var(--teal); color: white; padding: 14px 20px; border-radius: 8px; text-decoration: none; font-weight: 700; transition: 0.3s; margin-top: auto; text-align: center; border: none; }
-        .btn:hover { background: #008f81; transform: translateY(-2px); }
+        .btn { display: inline-block; background: var(--accent); color: white; padding: 16px 30px; border-radius: 12px; text-decoration: none; font-weight: 700; transition: 0.3s; margin-top: 20px; text-align: center; }
+        .btn:hover { background: #1e40af; transform: scale(1.02); }
         
         footer { background: var(--navy); color: #e2e8f0; padding: 60px 20px; text-align: center; margin-top: 50px; }
-        footer a { color: #60a5fa; text-decoration: none; }
         .wa-float { position: fixed; bottom: 35px; right: 35px; background: var(--success); width: 65px; height: 65px; border-radius: 20px; display: flex; align-items: center; justify-content: center; color: white; z-index: 2000; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
 
         @media (max-width: 768px) { .grid-2 { grid-template-columns: 1fr; } h1 { font-size: 2.3rem !important; } }
@@ -127,8 +200,8 @@
     <header>
         <div class="container">
             <h1>Oficinas Virtuales en Guatemala</h1>
-            <p>La solución líder en <strong>dirección fiscal</strong> y comercial para empresas que buscan prestigio corporativo en Edificio Zona Pradera.</p>
-            <a href="https://wa.me/50223022200" class="btn" style="padding: 16px 30px;">Solicitar Cotización Inmediata</a>
+            <p>La solución líder en <strong>dirección fiscal</strong> y comercial para empresas que buscan cumplimiento legal total ante la SAT y prestigio corporativo.</p>
+            <a href="https://wa.me/50223022200" class="btn">Solicitar Cotización Inmediata</a>
         </div>
     </header>
 
@@ -137,9 +210,9 @@
         <section class="grid-2">
             <div>
                 <h2>Inscripción de Sociedades y Domicilio Legal</h2>
-                <p>Nuestra <strong>dirección comercial en Zona 10</strong> es el aliado estratégico para su <strong>inscripción de sociedades</strong>. Separe su vida personal de su negocio con una ubicación de alto impacto.</p>
-                <p>Servicios optimizados para trámites de <strong>RTU</strong> y recepción de notificaciones oficiales ante la SAT.</p>
-                <a href="#planes" class="btn" style="background:var(--navy)">Ver Planes y Precios</a>
+                <p>Nuestra <strong>dirección comercial en Zona 10</strong> es el aliado estratégico para su <strong>inscripción de sociedades</strong>. Evite usar su dirección domiciliar y proyecte una imagen de éxito con nuestro respaldo corporativo.</p>
+                <p>Servicios optimizados para trámites de <strong>RTU</strong> y recepción de notificaciones oficiales.</p>
+                <a href="#planes" class="btn" style="background:var(--navy)">Ver Planes SAT</a>
             </div>
             <div class="img-container">
                 <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" 
@@ -149,77 +222,58 @@
         </section>
 
         <section id="planes">
-            <h2 style="text-align:center;">Soluciones de Oficina Virtual</h2>
-            <p style="text-align:center; max-width: 800px; margin: 0 auto 50px auto;">
-                Nuestras <strong>oficinas virtuales en Guatemala</strong> ofrecen una ubicación estratégica en <strong>Zona 10</strong>. Asegure la recepción de notificaciones de la SAT y correspondencia comercial con total legalidad.
+            <h2 style="text-align:center;">Precios de Oficinas Virtuales</h2>
+            <p style="text-align:justify;">
+                Nuestras <strong>oficinas virtuales en Guatemala</strong> ofrecen una solución integral para profesionales y empresas que requieren una ubicación estratégica en <strong>Zona 10</strong>. Al contratar su <strong>domicilio fiscal</strong> con nosotros, usted asegura la recepción profesional de notificaciones de la SAT y correspondencia comercial, permitiéndole operar con total legalidad y prestigio desde cualquier parte del mundo.
             </p>
-
             <div class="pricing-grid">
                 <div class="price-card">
                     <div>
                         <h3>Plan Comercial</h3>
                         <div class="amount">Q250<span>/mes</span></div>
-                        <p style="text-align: center; font-size: 0.9rem;">Ideal para startups que buscan imagen profesional y manejo de paquetería.</p>
+                        <p>Ideal para manejo de imagen corporativa y recepción de mensajería profesional.</p>
                     </div>
-                    <a href="https://wa.me/50223022200" class="btn" style="background:var(--navy);">Elegir Plan</a>
-                </div>
-
-                <div class="price-card">
-                    <h3>Oficina virtual Básica</h3>
-                    <p style="font-size: 0.85rem; margin-bottom: 15px;">Dá el primer paso, con esta oficina virtual puedes iniciar tu negocio.</p>
-                    <ul class="features-list">
-                        <li>🏢 Dirección fiscal y comercial para documentos legales y comerciales.</li>
-                        <li>📽️ 8 horas mensuales de uso de sala de reuniones.</li>
-                        <li>📞 Número telefónico de oficina (PBX).</li>
-                        <li>🔊 Respondemos tus llamadas con el nombre de tu negocio.</li>
-                        <li>🎧 Recepcionista para atender llamadas, visitas y correspondencia.</li>
-                        <li>💬 WhatsApp Business con tu número telefónico de oficina (PBX).</li>
-                        <li>📋 Acceso a plataforma de asistencia virtual para historial de llamadas y correspondencia.</li>
-                    </ul>
-                    <div class="amount">Q375<span>.00 mensuales</span></div>
-                    <a href="https://wa.me/50223022200" class="btn">SOLICITA UNA COTIZACIÓN</a>
+                    <a href="https://wa.me/50223022200" class="btn" style="background:var(--navy);">Contratar Plan</a>
                 </div>
 
                 <div class="price-card featured">
-                    <h3>Oficina virtual E-Office</h3>
-                    <p style="font-size: 0.85rem; margin-bottom: 15px;">Dirige tu negocio desde cualquier lugar de Guatemala.</p>
-                    <ul class="features-list">
-                        <li>🏢 Dirección fiscal y comercial para documentos legales.</li>
-                        <li>📽️ 20 horas mensuales de uso de sala de reuniones.</li>
-                        <li>📞 Número telefónico de oficina (PBX).</li>
-                        <li>🔊 Respondemos tus llamadas con el nombre de tu negocio.</li>
-                        <li>🎧 Recepcionista para atender tus llamadas.</li>
-                        <li>💬 WhatsApp Business con tu número PBX.</li>
-                        <li>📱 App móvil para realizar llamadas con tu número de oficina.</li>
-                        <li>📉 100 minutos de llamadas salientes a través de app móvil.</li>
-                    </ul>
-                    <a href="https://wa.me/50223022200" class="btn">SOLICITA UNA COTIZACIÓN</a>
+                    <div class="featured-tag">MÁS BUSCADO</div>
+                    <div>
+                        <h3>Plan Fiscal (SAT)</h3>
+                        <div class="amount">Q450<span>/mes</span></div>
+                        <p>Cumpla con los requisitos de la <strong>patente de comercio</strong> con nuestra dirección avalada.</p>
+                    </div>
+                    <a href="https://wa.me/50223022200" class="btn">Contratar Plan</a>
                 </div>
 
                 <div class="price-card">
-                    <h3>Oficina virtual Premium</h3>
-                    <p style="font-size: 0.85rem; margin-bottom: 15px;">Proyecta tu mejor versión profesional, con servicios de tecnología.</p>
-                    <ul class="features-list">
-                        <li>🏢 Dirección fiscal y comercial completa.</li>
-                        <li>📽️ 30 horas mensuales de uso de sala de reuniones.</li>
-                        <li>📞 Número telefónico PBX + WhatsApp Business.</li>
-                        <li>🎧 Recepcionista e historial de llamadas en plataforma.</li>
-                        <li>📱 App móvil + 200 minutos de llamadas salientes.</li>
-                        <li>🌐 Sistema para gestión de clientes (CRM) y cotizaciones en línea.</li>
-                    </ul>
-                    <a href="https://wa.me/50223022200" class="btn" style="background:var(--navy);">SOLICITA UNA COTIZACIÓN</a>
+                    <div>
+                        <h3>Emprendedor Plus</h3>
+                        <div class="amount">Q550<span>/mes</span></div>
+                        <p>Dirección fiscal + uso de salas de reuniones para cerrar negocios de clase mundial.</p>
+                    </div>
+                    <a href="https://wa.me/50223022200" class="btn" style="background:var(--navy);">Contratar Plan</a>
+                </div>
+
+                <div class="price-card">
+                    <div>
+                        <h3>Corporativo VIP</h3>
+                        <div class="amount">Q750<span>/mes</span></div>
+                        <p>Acceso total a infraestructura premium y atención de llamadas personalizada.</p>
+                    </div>
+                    <a href="https://wa.me/50223022200" class="btn" style="background:var(--navy);">Contratar Plan</a>
                 </div>
             </div>
         </section>
 
         <section class="seo-section">
-            <h2>Especialistas en Domicilio Legal en Zona Pradera</h2>
+            <h2>Expertos en Domicilio Fiscal para Emprendimiento en Guatemala</h2>
             <div class="grid-2">
                 <div>
-                    <p>Contar con un <strong>domicilio fiscal</strong> en el Edificio Zona Pradera no es solo un lujo, es una garantía de seriedad para sus clientes y la <strong>SAT</strong>.</p>
+                    <p>Contar con un <strong>domicilio fiscal</strong> en áreas de alta plusvalía como Zona 10 o Zona 14 no es solo un lujo, es una necesidad para el <strong>emprendimiento en Guatemala</strong> moderno.</p>
                 </div>
                 <div>
-                    <p>Nuestra infraestructura le garantiza que cada notificación legal sea gestionada con la importancia que su empresa merece.</p>
+                    <p>Nuestra infraestructura le garantiza que cada notificación de la <strong>SAT</strong> o el Registro Mercantil sea gestionada con la seriedad que su empresa merece.</p>
                 </div>
             </div>
         </section>
@@ -228,9 +282,9 @@
 
     <footer>
         <div class="container">
-            <p><strong>Oficinas Virtuales Guatemala by <a href="https://todoesdigital.com/oficinas-virtuales-guatemala">todoesdigital.com</a></strong></p>
+            <p><strong>Oficinas Virtuales Guatemala by <a href="https://todoesdigital.com/oficinas-virtuales-guatemala">todoesdigital.com</a> </strong></p>
             <p>Edificio Empresarial Zona Pradera, zona 10, Torre 2, oficina 1108, Guatemala, Guatemala</p>
-            <p>PBX: <strong><a href="tel:+50223022200" style="color: white; text-decoration: none;">2302-2200</a></strong></p>
+            <p>PBX <a href="">2302-2200</a> </p>
         </div>
     </footer>
 
