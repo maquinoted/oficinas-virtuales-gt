@@ -310,13 +310,24 @@
               <input type="text" name="nombre" required placeholder="Nombre completo" style="padding: 14px; border: 1.5px solid #cbd5e1; border-radius: 10px; font-family: inherit;">
               <input type="tel" name="telefono" required placeholder="WhatsApp / Teléfono" style="padding: 14px; border: 1.5px solid #cbd5e1; border-radius: 10px; font-family: inherit;">
               
-              <select name="plan" style="padding: 14px; border: 1.5px solid #cbd5e1; border-radius: 10px; font-family: inherit; background: white;">
-                <option value="" disabled selected>Seleccione un plan</option>
-                <option value="Comercial">Plan Comercial - Q250</option>
-                <option value="Basica">Básica Pro - Q375</option>
-                <option value="E-Office">E-Office Global - Q450</option>
-                <option value="Premium">Premium Tech - Q750</option>
-              </select>
+              <div style="display: flex; flex-direction: column; gap: 5px;">
+                  <label for="plan-select" style="font-size: 0.9rem; font-weight: 600; color: #1e293b;">
+                    Seleccione su Plan:
+                  </label>
+                  
+                  <select 
+                    id="plan-select" 
+                    name="plan" 
+                    required
+                    style="padding: 14px; border: 1.5px solid #cbd5e1; border-radius: 10px; font-family: inherit; background: white;"
+                  >
+                    <option value="" disabled selected>Elija una opción...</option>
+                    <option value="Comercial">Plan Comercial - Q250</option>
+                    <option value="Basica">Básica Pro - Q375</option>
+                    <option value="E-Office">E-Office Global - Q450</option>
+                    <option value="Premium">Premium Tech - Q750</option>
+                  </select>
+                </div>
 
               <textarea name="mensaje" placeholder="¿Desea agregar algún detalle?" rows="2" style="padding: 14px; border: 1.5px solid #cbd5e1; border-radius: 10px; font-family: inherit; resize: none;"></textarea>
               
