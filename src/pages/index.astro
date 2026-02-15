@@ -262,14 +262,20 @@
                 Tu navegador no soporta el elemento de audio.
               </audio>
               <script>
-                  const audio = document.getElementById('audio-virtual');
-                  
-                  // Ajusta el '1.5' al tiempo exacto donde empieza la voz en tu audio
-                  audio.addEventListener('play', () => {
-                    if (audio.currentTime < 1.5) {
-                      audio.currentTime = 1.5;
+                  window.addEventListener('load', () => {
+                    const audio = document.getElementById('audio-virtual');
+                    if (audio) {
+                      // Forzamos el tiempo a 0 al cargar la página
+                      audio.currentTime = 0;
+                      
+                      // Por si el navegador intenta "ayudarte" a retomar donde te quedaste
+                      audio.addEventListener('play', () => {
+                        if (audio.currentTime > 5) { // Si detecta que saltó adelante
+                          audio.currentTime = 0;
+                        }
+                      }, { once: true });
                     }
-                  }, { once: true }); // Solo lo hace la primera vez
+                  });
                 </script>
             </div>
             <div class="pricing-grid">
