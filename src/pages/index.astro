@@ -257,10 +257,20 @@
             </p>
             <div class="audio-container" style="background: #f1f5f9; padding: 20px; border-radius: 12px; border: 1px solid #e2e8f0;">
               <p style="margin-top:0; font-weight: bold; color: #0f172a;">🎙️ Escucha cómo funciona una oficina virtual:</p>
-              <audio controls style="width: 100%;">
+              <audio id="audio-virtual" controls style="width: 100%;">
                 <source src="/audio/oficinaVirtual.mp3" type="audio/mpeg">
                 Tu navegador no soporta el elemento de audio.
               </audio>
+              <script>
+                  const audio = document.getElementById('audio-virtual');
+                  
+                  // Ajusta el '1.5' al tiempo exacto donde empieza la voz en tu audio
+                  audio.addEventListener('play', () => {
+                    if (audio.currentTime < 1.5) {
+                      audio.currentTime = 1.5;
+                    }
+                  }, { once: true }); // Solo lo hace la primera vez
+                </script>
             </div>
             <div class="pricing-grid">
                 <div class="price-card">
