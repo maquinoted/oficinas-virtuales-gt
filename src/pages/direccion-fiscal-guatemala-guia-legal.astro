@@ -159,9 +159,8 @@
 
     <header>
         <div class="container">
-            <h1>Oficinas Virtuales en Guatemala</h1>
+            <h1>Dirección Fiscal en Guatemala: Guía para su empresa.</h1>
             <p>La solución líder en <strong>dirección fiscal</strong> y comercial para empresas que buscan cumplimiento legal total ante la SAT y prestigio corporativo.</p>
-            <a href="https://wa.me/50223010800" class="btn">Cotice aquí</a>
         </div>
     </header>
     <main class="container">
@@ -199,101 +198,6 @@
               o simplemente busque reducir costos operativos sin sacrificar prestigio, nuestro modelo de 
               <strong>oficina virtual</strong> es la solución flexible que el mercado guatemalteco exige hoy.
             </p>
-        </section>
-        <section id="planes">
-            <h2 style="text-align:center;">Precios de Oficinas Virtuales</h2>
-            <p style="text-align:justify;">
-                Nuestras <strong>oficinas virtuales en Guatemala</strong> ofrecen una solución integral para profesionales y empresas que requieren una ubicación estratégica en <strong>Zona 10</strong>. Al contratar su <strong>domicilio fiscal</strong> con nosotros, usted asegura la recepción profesional de notificaciones de la SAT y correspondencia comercial, permitiéndole operar con total legalidad y prestigio desde cualquier parte del mundo.
-            </p>
-            <div class="audio-container" style="background: #f1f5f9; padding: 20px; border-radius: 12px; border: 1px solid #e2e8f0;">
-              <p style="margin-top:0; font-weight: bold; color: #0f172a;">🎙️ Escucha cómo funciona una oficina virtual:</p>
-              <audio id="audio-virtual" controls style="width: 100%;">
-                <source src="/audio/oficinaVirtual.mp3" type="audio/mpeg">
-                Tu navegador no soporta el elemento de audio.
-              </audio>
-              <script>
-                  // Usamos una función que se ejecute de inmediato
-                  const inicializarAudio = () => {
-                    const audio = document.getElementById('audio-virtual');
-                    if (!audio) return;
-
-                    // 1. Forzar a 0 en cuanto el archivo carga su información básica
-                    audio.addEventListener('loadedmetadata', () => {
-                      audio.currentTime = 0;
-                    });
-
-                    // 2. Por si el navegador ya tenía el audio en caché y se saltó el evento anterior
-                    audio.currentTime = 0;
-
-                    // 3. Seguro contra el "Media Resume" de Chrome al dar Play
-                    audio.addEventListener('play', () => {
-                      if (audio.currentTime > 0.5) { 
-                        audio.currentTime = 0;
-                      }
-                    }, { once: true });
-                  };
-
-                  // Ejecutar al cargar y si Astro hace transiciones de página
-                  window.addEventListener('load', inicializarAudio);
-                  document.addEventListener('astro:after-swap', inicializarAudio);
-                </script>
-            </div>
-            <div class="pricing-grid">
-                <div class="price-card">
-                    <div>
-                        <h3>Plan essential</h3>
-                        <div class="amount">Q150<span>/mes</span></div>
-                        <p>Dirección fiscal, recepción de correspondencia, únicamente con pago por año anticipado. </p>
-                    </div>
-                    <a href="https://wa.me/50223010800" class="btn" style="background:var(--navy);">Contratar Plan</a>
-                </div>
-                <div class="price-card ">
-                    <div>
-                        <h3>Plan Comercial</h3>
-                        <div class="amount">Q375<span>/mes</span></div>
-                        <p>Dirección fiscal, recepción de correspondencia.</p>
-                        <p>8 horas de salas de reuniones al mes</p>
-                        <p>PBX cloud, recepción y traslado de llamadas, 50 minutos de llamadas salientes / mes, WhatsApp Business, IVR</p> 
-                        <p>Parqueo Q9 /hora</p>
-                    </div>
-                    <a href="https://wa.me/50223010800" class="btn" style="background:var(--navy);">Contratar Plan</a>
-                </div>
-                <div class="price-card featured">
-                    <div class="featured-tag">Más contratado</div>
-                    <div>
-                        <h3>Plan Ejecutivo</h3>
-                        <div class="amount">Q575<span>/mes</span></div>
-                        <p>Dirección fiscal, recepción de correspondencia.</p>
-                        <p>25 horas de salas de reuniones al mes</p>
-                        <p>PBX cloud, recepción y traslado de llamadas, 100 minutos de llamadas salientes / mes, WhatsApp Business, IVR</p>
-                        <p>Parqueo Q9 /hora</p>
-                    </div>
-                    <a href="https://wa.me/50223010800" class="btn">Contratar Plan</a>
-                </div>
-                <div class="price-card">
-                    <div>
-                        <h3>Plan VIP</h3>
-                        <div class="amount">Q750<span>/mes</span></div>
-                        <p>Dirección fiscal, recepción de correspondencia.</p>
-                        <p>40 horas de salas de reuniones / mes</p>
-                        <p>PBX cloud, recepción y traslado de llamadas, 200 minutos de llamadas salientes / mes, WhatsApp Business, IVR</p>
-                        <p>Parqueo Q9 /hora</p>
-                    </div>
-                    <a href="https://wa.me/50223010800" class="btn" style="background:var(--navy);">Contratar Plan</a>
-                </div>
-            </div>
-            <h3>1 mes gratis de oficina virtual al pagar semestral</h3>
-        </section>
-        <section class="seo-section">
-            <h2>Expertos en Domicilio Fiscal para Emprendimiento en Guatemala</h2>
-            <div class="grid-2">
-                <div>
-                    <p>Contar con un <strong>domicilio fiscal</strong> en áreas de alta plusvalía como Zona 10 no es solo un lujo, es una necesidad para el <strong>emprendimiento en Guatemala</strong> moderno.</p>
-                </div>
-                <div>
-                    <p>Nuestra infraestructura le garantiza que cada notificación de la <strong>SAT</strong> o el Registro Mercantil sea gestionada con la seriedad que su empresa merece.</p>
-                </div>
-            </div>
         </section>
         <section id="contacto" class="container" style="padding: 60px 20px;">
           <div style="background: var(--white); border-radius: 32px; padding: 40px; border: 1px solid #e2e8f0; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05); display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; align-items: center;">
