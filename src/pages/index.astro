@@ -262,20 +262,30 @@
                 Tu navegador no soporta el elemento de audio.
               </audio>
               <script>
-                  window.addEventListener('load', () => {
+                  // Usamos una función que se ejecute de inmediato
+                  const inicializarAudio = () => {
                     const audio = document.getElementById('audio-virtual');
-                    if (audio) {
-                      // Forzamos el tiempo a 0 al cargar la página
+                    if (!audio) return;
+
+                    // 1. Forzar a 0 en cuanto el archivo carga su información básica
+                    audio.addEventListener('loadedmetadata', () => {
                       audio.currentTime = 0;
-                      
-                      // Por si el navegador intenta "ayudarte" a retomar donde te quedaste
-                      audio.addEventListener('play', () => {
-                        if (audio.currentTime > 5) { // Si detecta que saltó adelante
-                          audio.currentTime = 0;
-                        }
-                      }, { once: true });
-                    }
-                  });
+                    });
+
+                    // 2. Por si el navegador ya tenía el audio en caché y se saltó el evento anterior
+                    audio.currentTime = 0;
+
+                    // 3. Seguro contra el "Media Resume" de Chrome al dar Play
+                    audio.addEventListener('play', () => {
+                      if (audio.currentTime > 0.5) { 
+                        audio.currentTime = 0;
+                      }
+                    }, { once: true });
+                  };
+
+                  // Ejecutar al cargar y si Astro hace transiciones de página
+                  window.addEventListener('load', inicializarAudio);
+                  document.addEventListener('astro:after-swap', inicializarAudio);
                 </script>
             </div>
             <div class="pricing-grid">
