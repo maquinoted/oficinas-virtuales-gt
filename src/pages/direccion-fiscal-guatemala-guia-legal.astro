@@ -1,73 +1,169 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
+// SEO específico para esta página
 const title = "Guía Legal: Dirección Fiscal en Guatemala 2026 | Oficinas Virtuales";
-const description = "Requisitos de la SAT para formalizar su empresa con oficina virtual.";
+const description = "Requisitos legales de la SAT y Registro Mercantil para formalizar su empresa con una oficina virtual en Zona Pradera, Guatemala.";
 ---
 
 <Layout title={title} description={description}>
-    <style is:inline>
-        .container-formalizacion { width: 100%; padding: 4rem 1.5rem; background: white; }
-        .content-wrapper { max-width: 1100px; margin: 0 auto; }
-        .main-title { font-size: 3rem; font-weight: 900; text-align: center; margin-bottom: 3rem; color: #0f172a; }
-        .text-teal { color: #0d9488; }
-        .comparison-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 3rem; margin-bottom: 5rem; justify-items: center; }
-        .tarjeta-visual { width: 400px; height: 230px; border-radius: 16px; padding: 2rem; position: relative; box-sizing: border-box; overflow: hidden; }
-        .informal { background: #fff; border: 2px solid #f1f5f9; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        .profesional { background: #2d3136; color: white; box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
-        .sello-informal { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-15deg); color: rgba(239, 68, 68, 0.1); font-size: 3.5rem; font-weight: 900; }
-        .footer-content-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 4rem; border-top: 1px solid #eee; padding-top: 4rem; }
-        .form-card { background: #f8fafc; padding: 30px; border-radius: 20px; border: 1px solid #eee; }
-        @media (max-width: 900px) { .comparison-grid, .footer-content-grid { grid-template-columns: 1fr; } .tarjeta-visual { width: 100%; max-width: 400px; } }
-    </style>
-
+    
     <div class="container-formalizacion">
         <main class="content-wrapper">
-            <h1 class="main-title">Guía Legal de <span class="text-teal">Formalización SAT</span></h1>
+            
+            <header class="header-section text-center">
+                <h1 class="main-title">
+                    Guía de Formalización con <span class="text-teal">Oficinas Virtuales</span>
+                </h1>
+                <p class="text-slate-600 max-w-2xl mx-auto mb-16 text-lg">
+                    La formalización ante la SAT comienza con una dirección fiscal localizable. No pongas en riesgo tu patrimonio usando tu dirección residencial.
+                </p>
+            </header>
 
             <section class="comparison-grid">
-                <div class="tarjeta-visual informal">
-                    <div class="sello-informal">INFORMAL</div>
-                    <div style="position:relative; z-index:2;">
-                        <h3 style="margin:0;">Consultores Profesionales SA</h3>
-                        <p style="font-weight:bold; margin-top:10px;">Jorge Perez</p>
-                        <p style="font-size:12px; margin-top:20px; color:#64748b;">📍 Dirección Residencial (No apta SAT)</p>
+                
+                <div class="column">
+                    <div class="tarjeta-visual informal">
+                        <div class="sello-informal">INFORMAL</div>
+                        <div class="tarjeta-inner">
+                            <div class="tarjeta-top">
+                                <h3 class="biz-name-card">Consultores Profesionales SA</h3>
+                                <p class="owner-name-card">Jorge Perez</p>
+                            </div>
+                            <div class="tarjeta-bottom text-slate">
+                                <p>📍 Valles del bosque, casa 4</p>
+                                <p>📞 +502 30459080</p>
+                                <p>✉️ consultoresvarios@gmail.com</p>
+                            </div>
+                        </div>
                     </div>
+                    <p class="label-caption">❌ Riesgo: No Localizado por SAT</p>
                 </div>
 
-                <div class="tarjeta-visual profesional">
-                    <div style="position:relative; z-index:2;">
-                        <h3 style="margin:0; color:#22d3ee;">Consultores Profesionales SA</h3>
-                        <p style="font-weight:bold; margin-top:10px;">Jorge Perez</p>
-                        <p style="font-size:12px; margin-top:20px;">📍 Zona Pradera, Torre 2 Oficina 1108</p>
+                <div class="column">
+                    <div class="tarjeta-visual profesional">
+                        <div class="tarjeta-inner text-white">
+                            <div class="tarjeta-top">
+                                <h3 class="biz-name-card text-cyan">Consultores Profesionales SA</h3>
+                                <div class="divider-cyan"></div>
+                                <p class="owner-name-card font-bold">Jorge Perez</p>
+                                <p class="job-title-card text-slate-400 uppercase">Gerente General</p>
+                            </div>
+                            <div class="tarjeta-bottom text-slate-300">
+                                <p><span class="text-cyan font-bold">DIR:</span> Zona Pradera, torre 2 oficina 1108</p>
+                                <p><span class="text-cyan font-bold">PBX:</span> +502 23022299</p>
+                                <p><span class="text-cyan font-bold">MAIL:</span> gerencia@oficinasvirtualesguatemala.com</p>
+                            </div>
+                        </div>
                     </div>
+                    <p class="label-caption text-teal-bold">✅ Domicilio Fiscal Verificado</p>
                 </div>
+
             </section>
 
             <div class="footer-content-grid">
-                <article>
-                    <h2>Requisitos Legales 2026</h2>
-                    <p>Para habilitar su Factura Electrónica (FEL), la SAT exige un domicilio fiscal localizable. El contrato de subarrendamiento que proporcionamos cumple con todos los estándares legales.</p>
-                </article>
-
-                <aside class="form-card">
-                    <h3>Inicia tu trámite</h3>
-                    <form id="legal-form" style="display:flex; flex-direction:column; gap:12px;">
-                        <input type="text" name="nombre" required placeholder="Nombre" style="padding:12px; border-radius:8px; border:1px solid #cbd5e1;">
-                        <input type="tel" name="telefono" required placeholder="WhatsApp" style="padding:12px; border-radius:8px; border:1px solid #cbd5e1;">
-                        <button type="submit" style="padding:12px; background:#0f172a; color:white; border-radius:8px; border:none; cursor:pointer;">Solicitar Asesoría</button>
-                    </form>
+                <div class="prose-area text-slate-700">
+                    <h2 class="section-subtitle">Trámites SAT y Registro Mercantil</h2>
+                    <p class="description-text">
+                        Formalizar tu domicilio fiscal en <strong>oficinasvirtualesguatemala.com</strong> te permite cumplir con los requisitos de la SAT para la habilitación de Facturas Electrónicas (FEL) y evitar multas por falta de localización.
+                    </p>
+                    <ul class="mt-6 space-y-3 list-disc pl-5">
+                        <li><strong>Contrato de Subarrendamiento:</strong> Documento legal clave para tu RTU.</li>
+                        <li><strong>Sede en Zona Pradera:</strong> Ubicación de prestigio para tu Patente de Comercio.</li>
+                        <li><strong>Recepción Legal:</strong> Garantía de presencia física ante delegados de la SAT.</li>
+                    </ul>
+                </div>
+                
+                <aside class="sidebar-form">
+                    <div class="form-card">
+                        <h3 class="text-xl font-bold mb-2">¿Deseas formalizarte?</h3>
+                        <p class="text-xs text-slate-500 mb-6">Inicia tu trámite con una dirección de prestigio.</p>
+                        
+                        <form id="legal-form" style="display: flex; flex-direction: column; gap: 15px;">
+                            <input type="text" name="nombre" required placeholder="Nombre completo" style="padding: 14px; border: 1.5px solid #cbd5e1; border-radius: 10px;">
+                            <input type="tel" name="telefono" required placeholder="WhatsApp / Teléfono" style="padding: 14px; border: 1.5px solid #cbd5e1; border-radius: 10px;">
+                            <button type="submit" id="submit-btn-legal" class="btn-submit">Solicitar Cotización</button>
+                        </form>
+                    </div>
                 </aside>
             </div>
         </main>
     </div>
-
-    <script is:inline>
-        document.getElementById("legal-form").addEventListener("submit", async (e) => {
-            e.preventDefault();
-            const data = new FormData(e.target);
-            await fetch("https://formspree.io/f/xdalgllg", { method: "POST", body: data, headers: { 'Accept': 'application/json' } });
-            window.location.href = "/gracias";
-        });
-    </script>
 </Layout>
+
+<style>
+    /* Estilos originales preservados */
+    .container-formalizacion { width: 100%; padding: 4rem 1.5rem; background: white; font-family: 'Inter', sans-serif; }
+    .content-wrapper { max-width: 1100px; margin: 0 auto; }
+    .main-title { font-size: 3.5rem; font-weight: 900; margin-bottom: 2rem; line-height: 1.1; color: #0f172a; text-align: center; }
+    .text-teal { color: #0d9488; }
+    .text-cyan { color: #22d3ee; }
+
+    .comparison-grid { 
+        display: grid; 
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
+        gap: 3rem; 
+        margin-bottom: 6rem;
+        justify-items: center;
+    }
+
+    .column { display: flex; flex-direction: column; align-items: center; width: 100%; }
+
+    .tarjeta-visual { 
+        width: 400px; 
+        height: 230px; 
+        border-radius: 16px; 
+        padding: 2.2rem; 
+        position: relative; 
+        box-sizing: border-box; 
+        overflow: hidden;
+    }
+
+    .informal { background: #fff; border: 2px solid #f1f5f9; box-shadow: 0 4px 20px rgba(0,0,0,0.05); }
+    .profesional { background: #2d3136; box-shadow: 0 25px 50px rgba(0,0,0,0.35); }
+
+    .tarjeta-inner { height: 100%; display: flex; flex-direction: column; justify-content: space-between; position: relative; z-index: 10; }
+    .biz-name-card { font-weight: 800; font-size: 1.15rem; margin: 0; }
+    .owner-name-card { font-size: 1.4rem; font-weight: 900; margin-top: 0.5rem; }
+    .divider-cyan { width: 60px; height: 3px; background: #22d3ee; margin: 10px 0; }
+    .tarjeta-bottom { font-size: 0.85rem; line-height: 1.5; }
+
+    .sello-informal { 
+        position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(-15deg); 
+        color: rgba(239, 68, 68, 0.1); font-size: 4rem; font-weight: 900; pointer-events: none; 
+    }
+
+    .footer-content-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 4rem; border-top: 1px solid #f1f5f9; padding-top: 4rem; }
+    .section-subtitle { font-size: 2.5rem; font-weight: 900; margin-bottom: 1.5rem; }
+    .description-text { font-size: 1.15rem; color: #475569; line-height: 1.7; }
+    .label-caption { margin-top: 1.5rem; font-weight: bold; font-size: 0.85rem; text-transform: uppercase; color: #94a3b8; }
+    .text-teal-bold { color: #0d9488; }
+    
+    .form-card { background-color: #f8fafc; padding: 2.5rem; border-radius: 1.5rem; border: 1px solid #e2e8f0; }
+    .btn-submit { background: #0f172a; color: white; padding: 15px; border-radius: 10px; border: none; font-weight: bold; cursor: pointer; transition: 0.3s; }
+    .btn-submit:hover { background: #1e293b; }
+
+    @media (max-width: 900px) {
+        .comparison-grid, .footer-content-grid { grid-template-columns: 1fr; }
+        .tarjeta-visual { width: 100%; max-width: 400px; }
+        .main-title { font-size: 2.5rem; }
+    }
+</style>
+
+<script is:inline>
+  document.getElementById("legal-form").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const btn = document.getElementById("submit-btn-legal");
+    btn.disabled = true;
+    const data = new FormData(e.target);
+    try {
+      const res = await fetch("https://formspree.io/f/xdalgllg", { 
+        method: "POST", 
+        body: data, 
+        headers: { 'Accept': 'application/json' } 
+      });
+      if (res.ok) window.location.href = "/gracias";
+    } catch (err) { alert("Error al enviar."); }
+    btn.disabled = false;
+  });
+</script>

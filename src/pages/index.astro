@@ -7,16 +7,31 @@ const schemaGraph = [
     "@id": "https://www.oficinasvirtualesguatemala.com/#webpage",
     "url": "https://www.oficinasvirtualesguatemala.com/",
     "name": "Oficinas Virtuales en Guatemala | Dirección Fiscal y Comercial",
-    "description": "Servicios de oficina virtual y domicilio fiscal en Guatemala.",
+    "description": "Servicios de oficina virtual y domicilio fiscal actualizados para febrero 2026 en Guatemala.",
     "datePublished": "2024-01-01T08:00:00+00:00",
     "dateModified": "2026-02-13T12:00:00+00:00"
+  },
+  {
+    "@type": "LocalBusiness",
+    "name": "Oficinas Virtuales Guatemala",
+    "image": "https://www.oficinasvirtualesguatemala.com/oficinas-virtuales-guatemala.jpg",
+    "telephone": "+50223010800",
+    "url": "https://www.oficinasvirtualesguatemala.com/",
+    "priceRange": "Q150 - Q750",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Zona Pradera, Torre 2, oficina 1108",
+      "addressLocality": "Ciudad de Guatemala",
+      "addressRegion": "Guatemala",
+      "addressCountry": "GT"
+    }
   }
 ];
 ---
 
 <Layout 
     title="Oficinas Virtuales en Guatemala | Dirección Fiscal SAT y Comercial"
-    description="Obtenga su dirección fiscal para SAT e inscripción de sociedades en Zona Pradera desde Q150 mensuales. Prestigio para su empresa."
+    description="Alquilamos Oficinas Virtuales en Guatemala para fortalecer la imagen de su empresa. Obtenga su dirección fiscal para SAT desde Q150 mensuales."
 >
     <script type="application/ld+json" is:inline set:html={JSON.stringify({ "@context": "https://schema.org", "@graph": schemaGraph })} />
 
@@ -25,26 +40,37 @@ const schemaGraph = [
             --navy: #0f172a; --accent: #1d4ed8; --slate: #475569; 
             --light: #f8fafc; --white: #ffffff; --success: #15803d;
         }
-        body { margin: 0; color: var(--navy); line-height: 1.6; }
+        body { margin: 0; font-family: 'Inter', system-ui, sans-serif; background-color: var(--light); color: var(--navy); line-height: 1.6; }
         nav { background: var(--white); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; height: 70px; }
         .logo { font-weight: 800; font-size: 1.3rem; color: var(--navy); display: flex; align-items: center; gap: 12px; text-transform: uppercase; }
         .logo-box { width: 35px; height: 35px; background: var(--accent); border-radius: 8px; }
-        header { background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80'); background-size: cover; padding: 120px 20px; text-align: center; color: white; }
+        header { background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80'); background-size: cover; background-position: center; color: white; padding: 120px 20px; text-align: center; }
+        header h1 { font-size: 3.5rem; margin: 0; letter-spacing: -2px; line-height: 1.1; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; padding: 60px 0; }
-        .btn { display: inline-block; background: var(--accent); color: white; padding: 16px 30px; border-radius: 12px; text-decoration: none; font-weight: 700; transition: 0.3s; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; padding: 40px 0; }
         .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; margin-top: 50px; }
-        .price-card { background: var(--white); padding: 40px; border-radius: 24px; text-align: center; border: 1px solid #e2e8f0; }
-        footer { background: var(--navy); color: white; padding: 40px; text-align: center; margin-top: 50px; }
-        @media (max-width: 768px) { .grid-2 { grid-template-columns: 1fr; } }
+        .price-card { background: var(--white); padding: 50px 30px; border-radius: 24px; text-align: center; border: 1px solid #e2e8f0; display: flex; flex-direction: column; justify-content: space-between; transition: 0.3s; }
+        .price-card.featured { border: 2.5px solid var(--accent); position: relative; }
+        .featured-tag { position: absolute; top: -18px; left: 50%; transform: translateX(-50%); background: var(--navy); color: white; padding: 8px 24px; border-radius: 50px; font-size: 0.75rem; font-weight: 800; }
+        .amount { font-size: 3rem; font-weight: 800; color: var(--navy); margin: 15px 0; }
+        .btn { display: inline-block; background: var(--accent); color: white; padding: 16px 30px; border-radius: 12px; text-decoration: none; font-weight: 700; transition: 0.3s; margin-top: 20px; }
+        .faq-section { padding: 4rem 1rem; background: #f9f9f9; }
+        details { background: white; margin-bottom: 1rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        summary { padding: 1.2rem; cursor: pointer; font-weight: 700; list-style: none; position: relative; }
+        summary::after { content: '+'; position: absolute; right: 20px; }
+        .answer { padding: 0 1.2rem 1.2rem; color: #444; }
+        footer { background: var(--navy); color: white; padding: 60px 20px; text-align: center; }
+        @media (max-width: 768px) { .grid-2 { grid-template-columns: 1fr; } h1 { font-size: 2.3rem !important; } }
     </style>
 
-    <nav><div class="logo"><div class="logo-box"></div>Oficinas virtuales</div></nav>
+    <nav>
+        <div class="logo"><div class="logo-box"></div>Oficinas virtuales</div>
+    </nav>
 
     <header>
         <div class="container">
             <h1>Oficinas Virtuales en Guatemala</h1>
-            <p>Dirección fiscal y comercial líder en Zona 10.</p>
+            <p>La solución líder en <strong>dirección fiscal</strong> y comercial para empresas que buscan cumplimiento legal total ante la SAT y prestigio corporativo.</p>
             <a href="https://wa.me/50223010800" class="btn">Cotice aquí</a>
         </div>
     </header>
@@ -52,25 +78,77 @@ const schemaGraph = [
     <main class="container">
         <section class="grid-2">
             <div>
-                <h2>Dirección Fiscal y Comercial</h2>
-                <p>Ubicación estratégica en Zona 10 para su inscripción de sociedades ante la SAT.</p>
-                <a href="#contacto" class="btn" style="background:var(--navy)">Solicitar Información</a>
+                <h2>Inscripción de Sociedades y Domicilio Legal</h2>
+                <p>Nuestra <strong>dirección comercial en Zona 10</strong> es el aliado estratégico para su <strong>inscripción de sociedades</strong>. Evite usar su dirección domiciliar y proyecte una imagen de éxito.</p>
+                <a href="#planes" class="btn" style="background:var(--navy)">Ver Planes</a>
             </div>
-            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Zona 10 Guatemala" style="border-radius:24px; width:100%;" />
+            <div style="border-radius: 24px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Edificio Zona Pradera" style="width: 100%; display: block;" />
+            </div>
         </section>
 
-        <section id="contacto">
-            <div style="background: white; padding: 40px; border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+        <section id="planes">
+            <h2 style="text-align:center;">Precios de Oficinas Virtuales</h2>
+            
+            <div style="background: #f1f5f9; padding: 20px; border-radius: 12px; margin-bottom: 2rem;">
+              <p style="font-weight: bold;">🎙️ Escucha cómo funciona una oficina virtual:</p>
+              <audio controls style="width: 100%;">
+                <source src="/audio/oficinaVirtual.mp3" type="audio/mpeg">
+              </audio>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="price-card">
+                    <div>
+                        <h3>Plan Essential</h3>
+                        <div class="amount">Q150<span>/mes</span></div>
+                        <p>Dirección fiscal y comercial. Pago anual anticipado.</p>
+                    </div>
+                    <a href="https://wa.me/50223010800" class="btn">Contratar</a>
+                </div>
+                <div class="price-card featured">
+                    <div class="featured-tag">Más popular</div>
+                    <div>
+                        <h3>Plan Ejecutivo</h3>
+                        <div class="amount">Q575<span>/mes</span></div>
+                        <p>Dirección fiscal + 25h Sala de Reuniones + PBX Cloud.</p>
+                    </div>
+                    <a href="https://wa.me/50223010800" class="btn">Contratar</a>
+                </div>
+                <div class="price-card">
+                    <div>
+                        <h3>Plan VIP</h3>
+                        <div class="amount">Q750<span>/mes</span></div>
+                        <p>Dirección fiscal + 40h Sala + PBX Cloud + CRM.</p>
+                    </div>
+                    <a href="https://wa.me/50223010800" class="btn">Contratar</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <h2 style="text-align:center;">Preguntas Frecuentes</h2>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <details><summary>¿Ofrecen domicilio fiscal para la SAT?</summary><div class="answer">Sí, cumplimos con todos los requisitos legales para trámites de RTU.</div></details>
+                <details><summary>¿Dónde están ubicados?</summary><div class="answer">Estamos en el complejo empresarial Zona Pradera, Torre 2, Oficina 1108.</div></details>
+            </div>
+        </section>
+
+        <section id="contacto" style="padding: 60px 0;">
+            <div style="background: white; padding: 40px; border-radius: 24px; border: 1px solid #e2e8f0; max-width: 600px; margin: 0 auto;">
+                <h3 style="text-align:center;">Solicitar Cotización</h3>
                 <form id="contact-form" style="display: flex; flex-direction: column; gap: 15px;">
                     <input type="text" name="nombre" required placeholder="Nombre completo" style="padding: 14px; border: 1px solid #cbd5e1; border-radius: 10px;">
-                    <input type="tel" name="telefono" required placeholder="Teléfono / WhatsApp" style="padding: 14px; border: 1px solid #cbd5e1; border-radius: 10px;">
-                    <button type="submit" id="submit-btn" class="btn">Enviar Solicitud</button>
+                    <input type="tel" name="telefono" required placeholder="WhatsApp" style="padding: 14px; border: 1px solid #cbd5e1; border-radius: 10px;">
+                    <button type="submit" id="submit-btn" class="btn" style="width: 100%;">Enviar ahora</button>
                 </form>
             </div>
         </section>
     </main>
 
-    <footer><p>Zona Pradera, Torre 2, oficina 1108, Guatemala | PBX 23010800</p></footer>
+    <footer>
+        <p>Zona Pradera, Torre 2, oficina 1108, Ciudad de Guatemala | PBX 23010800</p>
+    </footer>
 
     <script is:inline>
         document.getElementById("contact-form").addEventListener("submit", async (e) => {
