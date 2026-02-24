@@ -9,8 +9,6 @@ const { title, description } = Astro.props;
 const canonicalURL = ("https://www.oficinasvirtualesguatemala.com" + Astro.url.pathname).replace(/\/$/, "");
 ---
 
-
-
 <!doctype html>
 <html lang="es-GT">
 	<head>
@@ -24,13 +22,32 @@ const canonicalURL = ("https://www.oficinasvirtualesguatemala.com" + Astro.url.p
 		<meta name="description" content={description} />
 		<link rel="canonical" href={canonicalURL} />
 
-		<script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-		})(window,document,'script','dataLayer','GTM-TKG9SKMT');</script>
+		<script is:inline>
+			function loadGTM() {
+				if (window.gtmLoaded) return;
+				window.gtmLoaded = true;
+
+				(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+				new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+				j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+				'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+				})(window,document,'script','dataLayer','GTM-TKG9SKMT');
+			}
+
+			// Escuchar interacciones para cargar los scripts pesados
+			const interactions = ['mouseover', 'keydown', 'touchstart', 'scroll'];
+			interactions.forEach(event => {
+				window.addEventListener(event, loadGTM, { once: true, passive: true });
+			});
+
+			// Carga de respaldo a los 4 segundos para no perder analítica de rebote
+			setTimeout(loadGTM, 4000);
+		</script>
 	</head>
 	<body>
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKG9SKMT"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		
 		<slot />
 	</body>
 </html>
