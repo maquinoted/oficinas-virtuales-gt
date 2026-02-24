@@ -34,13 +34,13 @@ const canonicalURL = ("https://www.oficinasvirtualesguatemala.com" + Astro.url.p
 				})(window,document,'script','dataLayer','GTM-TKG9SKMT');
 			}
 
-			// Escuchar interacciones para cargar los scripts pesados
+			// Disparadores de carga por interacción humana
 			const interactions = ['mouseover', 'keydown', 'touchstart', 'scroll'];
 			interactions.forEach(event => {
 				window.addEventListener(event, loadGTM, { once: true, passive: true });
 			});
 
-			// Carga de respaldo a los 4 segundos para no perder analítica de rebote
+			// Carga de respaldo a los 4 segundos para asegurar métricas en visitas largas sin scroll
 			setTimeout(loadGTM, 4000);
 		</script>
 	</head>
