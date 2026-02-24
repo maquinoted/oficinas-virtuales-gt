@@ -1,7 +1,8 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://www.oficinasvirtualesguatemala.com', // Tu dominio oficial
-  trailingSlash: 'never', // O 'always', pero sé consistente
+  site: 'https://www.oficinasvirtualesguatemala.com',
+  trailingSlash: 'never', // ESTO elimina el / de las URLs
   // ... resto de tu config
 });
+

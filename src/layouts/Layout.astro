@@ -5,9 +5,11 @@ interface Props {
 }
 
 const { title, description } = Astro.props;
-// URL maestra forzada con WWW
-const canonicalURL = "https://www.oficinasvirtualesguatemala.com" + Astro.url.pathname.replace(/\/$/, "");
+// Esta lógica elimina cualquier barra final que se cuele
+const canonicalURL = ("https://www.oficinasvirtualesguatemala.com" + Astro.url.pathname).replace(/\/$/, "");
 ---
+
+
 
 <!doctype html>
 <html lang="es-GT">
