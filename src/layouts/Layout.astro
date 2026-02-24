@@ -2,7 +2,7 @@
 interface Props {
 	title: string;
 	description: string;
-	structuredData?: string; // Lo definimos como string para evitar errores de renderizado
+	structuredData?: string; 
 }
 
 const { title, description, structuredData } = Astro.props;
@@ -15,8 +15,6 @@ const canonicalURL = ("https://www.oficinasvirtualesguatemala.com" + Astro.url.p
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		
 		<title>{title}</title>
 		<meta name="description" content={description} />
 		<link rel="canonical" href={canonicalURL} />
