@@ -1,5 +1,7 @@
-// @ts-check
 import { defineConfig } from 'astro/config';
 
-// https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+  site: 'https://www.oficinasvirtualesguatemala.com', // Tu dominio oficial
+  trailingSlash: 'never', // O 'always', pero sé consistente
+  // ... resto de tu config
+});

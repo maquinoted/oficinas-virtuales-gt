@@ -1,12 +1,12 @@
 ---
-// Layout.astro
 interface Props {
 	title: string;
 	description: string;
 }
 
 const { title, description } = Astro.props;
-const canonicalURL = "https://www.oficinasvirtualesguatemala.com" + Astro.url.pathname;
+// Fuerza la URL canónica siempre con www y https
+const canonicalURL = "https://www.oficinasvirtualesguatemala.com" + Astro.url.pathname.replace(/\/$/, "");
 ---
 
 <!doctype html>
@@ -43,6 +43,5 @@ const canonicalURL = "https://www.oficinasvirtualesguatemala.com" + Astro.url.pa
 		height: 100%;
 		font-family: 'Inter', system-ui, sans-serif;
 		background-color: #f8fafc;
-		color: #0f172a;
 	}
 </style>

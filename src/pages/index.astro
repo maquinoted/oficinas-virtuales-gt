@@ -1,25 +1,22 @@
 ---
-// index.astro
 import Layout from '../layouts/Layout.astro';
 
-// Trasladamos los datos de Schema aquí para que el archivo sea más limpio
 const schemaGraph = [
   {
     "@type": "WebPage",
     "@id": "https://www.oficinasvirtualesguatemala.com/#webpage",
     "url": "https://www.oficinasvirtualesguatemala.com/",
     "name": "Oficinas Virtuales en Guatemala | Dirección Fiscal y Comercial",
-    "description": "Servicios de oficina virtual y domicilio fiscal actualizados para febrero 2026 en Guatemala.",
+    "description": "Servicios de oficina virtual y domicilio fiscal en Guatemala.",
     "datePublished": "2024-01-01T08:00:00+00:00",
     "dateModified": "2026-02-13T12:00:00+00:00"
-  },
-  // ... (Aquí iría el resto de tu JSON de Schema)
+  }
 ];
 ---
 
 <Layout 
     title="Oficinas Virtuales en Guatemala | Dirección Fiscal SAT y Comercial"
-    description="Alquilamos Oficinas Virtuales en Guatemala. Obtenga su dirección fiscal para SAT e inscripción de sociedades en Zona Pradera desde Q150."
+    description="Obtenga su dirección fiscal para SAT e inscripción de sociedades en Zona Pradera desde Q150 mensuales. Prestigio para su empresa."
 >
     <script type="application/ld+json" is:inline set:html={JSON.stringify({ "@context": "https://schema.org", "@graph": schemaGraph })} />
 
@@ -28,17 +25,26 @@ const schemaGraph = [
             --navy: #0f172a; --accent: #1d4ed8; --slate: #475569; 
             --light: #f8fafc; --white: #ffffff; --success: #15803d;
         }
-        /* ... (Copia aquí todo el CSS de tu archivo original) */
+        body { margin: 0; color: var(--navy); line-height: 1.6; }
+        nav { background: var(--white); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 1000; height: 70px; }
+        .logo { font-weight: 800; font-size: 1.3rem; color: var(--navy); display: flex; align-items: center; gap: 12px; text-transform: uppercase; }
+        .logo-box { width: 35px; height: 35px; background: var(--accent); border-radius: 8px; }
+        header { background: linear-gradient(rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80'); background-size: cover; padding: 120px 20px; text-align: center; color: white; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; padding: 60px 0; }
+        .btn { display: inline-block; background: var(--accent); color: white; padding: 16px 30px; border-radius: 12px; text-decoration: none; font-weight: 700; transition: 0.3s; }
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; margin-top: 50px; }
+        .price-card { background: var(--white); padding: 40px; border-radius: 24px; text-align: center; border: 1px solid #e2e8f0; }
+        footer { background: var(--navy); color: white; padding: 40px; text-align: center; margin-top: 50px; }
+        @media (max-width: 768px) { .grid-2 { grid-template-columns: 1fr; } }
     </style>
 
-    <nav>
-        <div class="logo"><div class="logo-box"></div>Oficinas virtuales</div>
-    </nav>
+    <nav><div class="logo"><div class="logo-box"></div>Oficinas virtuales</div></nav>
 
     <header>
         <div class="container">
             <h1>Oficinas Virtuales en Guatemala</h1>
-            <p>La solución líder en <strong>dirección fiscal</strong> y comercial para empresas que buscan cumplimiento legal total ante la SAT y prestigio corporativo.</p>
+            <p>Dirección fiscal y comercial líder en Zona 10.</p>
             <a href="https://wa.me/50223010800" class="btn">Cotice aquí</a>
         </div>
     </header>
@@ -46,20 +52,25 @@ const schemaGraph = [
     <main class="container">
         <section class="grid-2">
             <div>
-                <h2>Inscripción de Sociedades y Domicilio Legal</h2>
-                <p>Nuestra <strong>dirección comercial en Zona 10</strong> es el aliado estratégico para su <strong>inscripción de sociedades</strong>.</p>
-                <a href="#planes" class="btn" style="background:var(--navy)">Ver Planes</a>
+                <h2>Dirección Fiscal y Comercial</h2>
+                <p>Ubicación estratégica en Zona 10 para su inscripción de sociedades ante la SAT.</p>
+                <a href="#contacto" class="btn" style="background:var(--navy)">Solicitar Información</a>
             </div>
-            <div class="img-container">
-                <img src="https://www.oficinasvirtualesguatemala.com/oficinas-virtuales-guatemala.jpg" alt="Oficinas en Zona 10" />
-            </div>
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" alt="Zona 10 Guatemala" style="border-radius:24px; width:100%;" />
         </section>
 
-        </main>
+        <section id="contacto">
+            <div style="background: white; padding: 40px; border-radius: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                <form id="contact-form" style="display: flex; flex-direction: column; gap: 15px;">
+                    <input type="text" name="nombre" required placeholder="Nombre completo" style="padding: 14px; border: 1px solid #cbd5e1; border-radius: 10px;">
+                    <input type="tel" name="telefono" required placeholder="Teléfono / WhatsApp" style="padding: 14px; border: 1px solid #cbd5e1; border-radius: 10px;">
+                    <button type="submit" id="submit-btn" class="btn">Enviar Solicitud</button>
+                </form>
+            </div>
+        </section>
+    </main>
 
-    <footer>
-        <p>Zona Pradera, Torre 2, oficina 1108, Ciudad de Guatemala | PBX 23010800</p>
-    </footer>
+    <footer><p>Zona Pradera, Torre 2, oficina 1108, Guatemala | PBX 23010800</p></footer>
 
     <script is:inline>
         document.getElementById("contact-form").addEventListener("submit", async (e) => {
@@ -68,11 +79,7 @@ const schemaGraph = [
             btn.disabled = true;
             const data = new FormData(e.target);
             try {
-                const res = await fetch("https://formspree.io/f/xdalgllg", { 
-                    method: "POST", 
-                    body: data, 
-                    headers: { 'Accept': 'application/json' } 
-                });
+                const res = await fetch("https://formspree.io/f/xdalgllg", { method: "POST", body: data, headers: { 'Accept': 'application/json' } });
                 if (res.ok) window.location.href = "/gracias";
             } catch (err) { alert("Error al enviar."); }
             btn.disabled = false;
