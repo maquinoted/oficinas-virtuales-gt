@@ -3,56 +3,55 @@ import Layout from '../layouts/Layout.astro';
 
 const title = "Oficinas Virtuales en Guatemala | Dirección Fiscal SAT y Comercial";
 const description = "Alquilamos Oficinas Virtuales en Guatemala para fortalecer la imagen de su empresa. Obtenga su dirección fiscal para SAT, inscripción de sociedades y patente de comercio en el edificio Zona Pradera, zona 10, desde Q150 mensuales";
----
 
-<Layout title={title} description={description}>
-    <script type="application/ld+json" slot="structured-data">
+// SCHEMA COMO OBJETO (Impacto 0 en velocidad, detección 100% garantizada)
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
-        {
-          "@type": "WebPage",
-          "@id": "https://www.oficinasvirtualesguatemala.com/#webpage",
-          "url": "https://www.oficinasvirtualesguatemala.com/",
-          "name": "Oficinas Virtuales en Guatemala | Dirección Fiscal y Comercial",
-          "description": "Servicios de oficina virtual y domicilio fiscal actualizados para febrero 2026 en Guatemala.",
-          "datePublished": "2024-01-01T08:00:00+00:00",
-          "dateModified": "2026-02-13T12:00:00+00:00"
-        },
-        {
-          "@type": "LocalBusiness",
-          "name": "Oficinas Virtuales Guatemala",
-          "image": "https://www.oficinasvirtualesguatemala.com/oficinas-virtuales-guatemala.jpg",
-          "telephone": "+50223010800",
-          "url": "https://www.oficinasvirtualesguatemala.com/",
-          "priceRange": "Q150 - Q750",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Zona Pradera, Torre 2, oficina 1108",
-            "addressLocality": "Ciudad de Guatemala",
-            "addressRegion": "Guatemala",
-            "addressCountry": "GT"
-          }
-        },
-        {
-          "@type": "FAQPage",
-          "mainEntity": [
-            { "@type": "Question", "name": "¿Qué son las oficinas virtuales en Guatemala y cómo funcionan?", "acceptedAnswer": { "@type": "Answer", "text": "Las oficinas virtuales brindan dirección comercial, dirección fiscal y recepción de correspondencia GT sin necesidad de un espacio físico permanente." } },
-            { "@type": "Question", "name": "¿Ofrecen domicilio fiscal para sociedades en Guatemala ante la SAT?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, nuestro servicio cumple con todos los requisitos legales para los servicios de oficina virtual SAT y Registro Mercantil." } },
-            { "@type": "Question", "name": "¿Cuáles son los precios de oficina virtual en Guatemala?", "acceptedAnswer": { "@type": "Answer", "text": "Los oficina virtual Guatemala precios inician desde Q150 mensuales en el Plan Essential con pago anual." } },
-            { "@type": "Question", "name": "¿En qué zonas ofrecen el servicio de dirección fiscal?", "acceptedAnswer": { "@type": "Answer", "text": "Ofrecemos ubicaciones premium para oficinas virtuales zona 10, zona 14, zona 15 y zona 4." } },
-            { "@type": "Question", "name": "¿Puedo alquilar salas de reuniones por hora?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, contamos con alquiler de salas de reuniones por hora Guatemala totalmente equipadas en Zona Pradera." } },
-            { "@type": "Question", "name": "¿Qué diferencia hay entre oficina virtual y coworking en Guatemala?", "acceptedAnswer": { "@type": "Answer", "text": "El coworking ofrece espacio físico compartido, mientras que la oficina virtual se centra en la dirección fiscal y legal ante la SAT." } },
-            { "@type": "Question", "name": "¿Existen planes de oficina virtual para abogados en Guatemala?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, diseñamos planes específicos para abogados que necesitan dirección de prestigio para notificaciones legales." } },
-            { "@type": "Question", "name": "¿Cómo elijo los mejores planes de oficina virtual en Guatemala?", "acceptedAnswer": { "@type": "Answer", "text": "Debe considerar la ubicación y si incluye servicios de recepción de llamadas y respaldo legal ante la SAT." } },
-            { "@type": "Question", "name": "¿Cómo manejan la recepción de correspondencia?", "acceptedAnswer": { "@type": "Answer", "text": "Nuestro equipo profesional gestiona la recepción de correspondencia GT, notificando al cliente de inmediato." } },
-            { "@type": "Question", "name": "¿Por qué elegir una oficina virtual económica en Guatemala?", "acceptedAnswer": { "@type": "Answer", "text": "Permite reducir costos operativos manteniendo una dirección fiscal y comercial de lujo en las mejores zonas de la ciudad." } }
-          ]
-        }
+      "@type": "WebPage",
+      "@id": "https://www.oficinasvirtualesguatemala.com/#webpage",
+      "url": "https://www.oficinasvirtualesguatemala.com/",
+      "name": "Oficinas Virtuales en Guatemala | Dirección Fiscal y Comercial",
+      "description": "Servicios de oficina virtual y domicilio fiscal actualizados para febrero 2026 en Guatemala.",
+      "datePublished": "2024-01-01T08:00:00+00:00",
+      "dateModified": "2026-02-13T12:00:00+00:00"
+    },
+    {
+      "@type": "LocalBusiness",
+      "name": "Oficinas Virtuales Guatemala",
+      "image": "https://www.oficinasvirtualesguatemala.com/oficinas-virtuales-guatemala.jpg",
+      "telephone": "+50223010800",
+      "url": "https://www.oficinasvirtualesguatemala.com/",
+      "priceRange": "Q150 - Q750",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Zona Pradera, Torre 2, oficina 1108",
+        "addressLocality": "Ciudad de Guatemala",
+        "addressRegion": "Guatemala",
+        "addressCountry": "GT"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "¿Qué son las oficinas virtuales en Guatemala y cómo funcionan?", "acceptedAnswer": { "@type": "Answer", "text": "Las oficinas virtuales brindan dirección comercial, dirección fiscal y recepción de correspondencia GT sin necesidad de un espacio físico permanente." } },
+        { "@type": "Question", "name": "¿Ofrecen domicilio fiscal para sociedades en Guatemala ante la SAT?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, nuestro servicio cumple con todos los requisitos legales para los servicios de oficina virtual SAT y Registro Mercantil." } },
+        { "@type": "Question", "name": "¿Cuáles son los precios de oficina virtual en Guatemala?", "acceptedAnswer": { "@type": "Answer", "text": "Los oficina virtual Guatemala precios inician desde Q150 mensuales en el Plan Essential con pago anual." } },
+        { "@type": "Question", "name": "¿En qué zonas ofrecen el servicio de dirección fiscal?", "acceptedAnswer": { "@type": "Answer", "text": "Ofrecemos ubicaciones premium para oficinas virtuales zona 10, zona 14, zona 15 y zona 4." } },
+        { "@type": "Question", "name": "¿Puedo alquilar salas de reuniones por hora?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, contamos con alquiler de salas de reuniones por hora Guatemala totalmente equipadas en Zona Pradera." } },
+        { "@type": "Question", "name": "¿Qué diferencia hay entre oficina virtual y coworking en Guatemala?", "acceptedAnswer": { "@type": "Answer", "text": "El coworking ofrece espacio físico compartido, mientras que la oficina virtual se centra en la dirección fiscal y legal ante la SAT." } },
+        { "@type": "Question", "name": "¿Existen planes de oficina virtual para abogados en Guatemala?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, diseñamos planes específicos para abogados que necesitan dirección de prestigio para notificaciones legales." } },
+        { "@type": "Question", "name": "¿Cómo elijo los mejores planes de oficina virtual en Guatemala?", "acceptedAnswer": { "@type": "Answer", "text": "Debe considerar la ubicación y si incluye servicios de recepción de llamadas y respaldo legal ante la SAT." } },
+        { "@type": "Question", "name": "¿Cómo manejan la recepción de correspondencia?", "acceptedAnswer": { "@type": "Answer", "text": "Nuestro equipo profesional gestiona la recepción de correspondencia GT, notificando al cliente de inmediato." } },
+        { "@type": "Question", "name": "¿Por qué elegir una oficina virtual económica en Guatemala?", "acceptedAnswer": { "@type": "Answer", "text": "Permite reducir costos operativos manteniendo una dirección fiscal y comercial de lujo en las mejores zonas de la ciudad." } }
       ]
     }
-    </script>
+  ]
+};
+---
 
+<Layout title={title} description={description} structuredData={schema}>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKG9SKMT"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
