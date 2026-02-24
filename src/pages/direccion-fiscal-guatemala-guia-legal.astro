@@ -2,8 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 
 // Extraemos los datos para el Layout
-const title = "Dirección Fiscal en Guatemala | 7 Años de Experiencia en Zona 10.";
-const description = "Establezca su dirección fiscal en Zona Pradera con el respaldo de 7 años potenciando negocios en Guatemala. Brinde prestigio a su RTU y evite riesgos ante la SAT.";
+const title = "Alquiler de Oficinas en Guatemala vs. Oficinas Virtuales | Comparativa 2026";
+const description = "Analizamos el costo de alquiler de oficinas en Guatemala. Compare beneficios, zonas y ahorros reales entre una oficina física y una virtual.";
 ---
 
 <Layout title={title} description={description}>
@@ -13,77 +13,12 @@ const description = "Establezca su dirección fiscal en Zona Pradera con el resp
           "@graph": [
             {
               "@type": "WebPage",
-              "@id": "https://oficinasvirtualesguatemala.com",
-              "url": "https://oficinasvirtualesguatemala.com/direccion-fiscal-guatemala-guia-legal",
-              "name": "Dirección Fiscal y Comercial en Guatemala",
-              "description": "Domicilio fiscal actualizados para febrero 2026 en Guatemala.",
-              "datePublished": "2024-01-01T08:00:00+00:00",
-              "dateModified": "2026-02-13T12:00:00+00:00"
-            },
-            {
-              "@type": "LocalBusiness",
-              "@id": "https://oficinasvirtualesguatemala.com/#localbusiness",
-              "name": "Oficinas Virtuales Guatemala",
-              "image": "https://www.oficinasvirtualesguatemala.com/oficinas-virtuales-guatemala.jpg",
-              "telephone": "+50223010800",
-              "url": "https://oficinasvirtualesguatemala.com/",
-              "priceRange": "Q250 - Q750",
-              "address": {
-                "@type": "PostalAddress",
-                "streetAddress": "Zona Pradera, Torre 2, oficina 1108",
-                "addressLocality": "Ciudad de Guatemala",
-                "addressRegion": "Guatemala",
-                "addressCountry": "GT"
-              },
-              "geo": {
-                "@type": "GeoCoordinates",
-                "latitude": 14.5975,
-                "longitude": -90.4958
-              },
-              "openingHoursSpecification": {
-                "@type": "OpeningHoursSpecification",
-                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-                "opens": "08:00",
-                "closes": "17:00"
-              }
-            },
-            {
-              "@type": "FAQPage",
-              "@id": "https://oficinasvirtualesguatemala.com/#faq",
-              "mainEntity": [
-                {
-                  "@type": "Question",
-                  "name": "¿Qué requisitos piden para una oficina virtual en Guatemala?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Solo necesita su DPI, nombramiento de representante legal y recibo de servicios. Nosotros facilitamos el contrato de arrendamiento para trámites de SAT."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "¿Incluye dirección fiscal para la SAT?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Sí, nuestros planes incluyen dirección física avalada para inscripción de sociedades y actualización de RTU."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "¿En qué zonas de Guatemala ofrecen dirección comercial?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Contamos con ubicaciones premium en Zona 10 (Edificio Zona Pradera) y Zona 14, las áreas de mayor prestigio corporativo."
-                  }
-                },
-                {
-                  "@type": "Question",
-                  "name": "¿Es legal una oficina virtual ante la SAT?",
-                  "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "Es 100% legal. La normativa permite el uso de domicilios fiscales arrendados siempre que cuenten con el respaldo documental que brindamos."
-                  }
-                }
-              ]
+              "@id": "https://www.oficinasvirtualesguatemala.com/comparativa-alquiler-oficinas-guatemala",
+              "url": "https://www.oficinasvirtualesguatemala.com/comparativa-alquiler-oficinas-guatemala",
+              "name": "Alquiler de Oficinas en Guatemala vs. Oficinas Virtuales",
+              "description": "Análisis de costos y beneficios entre alquiler tradicional y oficinas virtuales en Guatemala.",
+              "datePublished": "2026-02-23T08:00:00+00:00",
+              "dateModified": "2026-02-23T12:00:00+00:00"
             }
           ]
         }
@@ -110,10 +45,13 @@ const description = "Establezca su dirección fiscal en Zona Pradera con el resp
 
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         section { padding: 30px 0; }
-        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
         
-        .img-container { background: #e2e8f0; border-radius: 24px; overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15); aspect-ratio: 3 / 2; }
-        .img-container img { width: 100%; height: 100%; object-fit: cover; }
+        /* Estilos de Contenido Comparativo */
+        .comparison-table-wrapper { overflow-x: auto; margin: 40px 0; }
+        table { width: 100%; border-collapse: collapse; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+        th { background: var(--navy); color: white; padding: 20px; text-align: left; }
+        td { padding: 20px; border-bottom: 1px solid #f1f5f9; }
+        .highlight-virtual { background: #f0fdfa; font-weight: bold; color: #0d9488; }
 
         .btn { display: inline-block; background: var(--accent); color: white; padding: 16px 30px; border-radius: 12px; text-decoration: none; font-weight: 700; transition: 0.3s; margin-top: 20px; text-align: center; }
         .btn:hover { background: #1e40af; transform: scale(1.02); }
@@ -121,7 +59,7 @@ const description = "Establezca su dirección fiscal en Zona Pradera con el resp
         footer { background: var(--navy); color: #e2e8f0; padding: 60px 20px; text-align: center; margin-top: 50px; }
         .wa-float { position: fixed; bottom: 35px; right: 35px; background: var(--success); width: 65px; height: 65px; border-radius: 20px; display: flex; align-items: center; justify-content: center; color: white; z-index: 2000; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
 
-        @media (max-width: 768px) { .grid-2 { grid-template-columns: 1fr; } h1 { font-size: 2.3rem !important; } }
+        @media (max-width: 768px) { h1 { font-size: 2.3rem !important; } }
     </style>
 
     <nav>
@@ -133,93 +71,67 @@ const description = "Establezca su dirección fiscal en Zona Pradera con el resp
 
     <header>
         <div class="container">
-            <h1>Dirección Fiscal en Guatemala: Respaldo Legal y Tributario.</h1>
-            <p>Obtenga una <strong>dirección fiscal</strong> de prestigio en <strong>Zona Pradera</strong> y asegure su cumplimiento total ante la SAT y el Registro Mercantil.</p>
+            <h1>Alquiler de Oficinas en Guatemala: Física vs. Virtual</h1>
+            <p>Compare el costo real de establecer sus <strong>oficinas en Guatemala</strong> y optimice su inversión corporativa.</p>
         </div>
     </header>
 
     <main class="container">
-        <section class="grid-2">
-            <div>
-                <h2>Inscripción de Sociedades y Domicilio Legal</h2>
-                <p>
-                    Al constituir su empresa, la elección de su <strong>domicilio legal</strong> es una decisión crítica. 
-                    Con más de <strong>7 años potenciando negocios</strong>, le ofrecemos una ubicación estratégica en 
-                    Zona Pradera para su <strong>inscripción de sociedades</strong> ante el <a target="_blank" href="https://principal.registromercantil.gob.gt/">Registro Mercantil</a>.
-                </p>
-                <p>
-                    Evite exponer la privacidad de su hogar; proteja su patrimonio y proyecte solidez desde el inicio. 
-                    Nuestros servicios están plenamente optimizados para la actualización de su <strong><a target="_blank" href="https://portal.sat.gob.gt/portal/rtu-digital/">RTU Digital</a></strong> 
-                    y la gestión profesional de notificaciones oficiales de la <strong><a target="_blank" href="https://portal.sat.gob.gt/portal">SAT</a></strong>.
-                </p>
-                <ul style="list-style: none; padding: 0; margin-top: 10px;">
-                    <li style="margin-bottom: 8px;">✅ <strong>Respaldo total</strong> en trámites de patentes de comercio.</li>
-                    <li style="margin-bottom: 8px;">✅ <strong>Gestión inmediata</strong> de correspondencia legal y tributaria.</li>
-                    <li>✅ <strong>Prestigio corporativo</strong> para su nueva entidad jurídica.</li>
-                </ul>
-            </div>
-            <div class="img-container">
-                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" 
-                     alt="Fachada corporativa en Zona Pradera Guatemala para dirección fiscal de sociedades" 
-                     loading="eager" width="600" height="400" />
-            </div>
-        </section>
-
         <section class="seo-content">
-            <h2 style="text-align:center;">¿Para qué sirve el domicilio fiscal en Guatemala?</h2>
+            <h2>Análisis del Alquiler de Oficinas en Zonas Corporativas</h2>
             <p>
-              El <strong>domicilio fiscal</strong> es el requisito indispensable para que la <strong>Superintendencia de Administración Tributaria (SAT)</strong> le asigne un número de identificación tributaria <strong>NIT</strong> a su empresa y usted pueda iniciar operaciones legalmente en Guatemala.
+                Al buscar el <strong>alquiler de oficinas</strong> en sectores como Zona 10 o Zona Pradera, las empresas se enfrentan a costos elevados de mantenimiento, contratos rígidos e inversión inicial en mobiliario. Las <strong>oficinas virtuales</strong> surgen como la alternativa inteligente para empresas modernas.
             </p>
+
+            <div class="comparison-table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Concepto de Gasto</th>
+                            <th>Oficina Física (Tradicional)</th>
+                            <th class="highlight-virtual">Oficina Virtual</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Inversión Inicial</td>
+                            <td>Depósito + Primer mes + Mobiliario</td>
+                            <td class="highlight-virtual">Suscripción mensual</td>
+                        </tr>
+                        <tr>
+                            <td>Costos Fijos</td>
+                            <td>Luz, Agua, Internet, Limpieza</td>
+                            <td class="highlight-virtual">Incluidos</td>
+                        </tr>
+                        <tr>
+                            <td>Mantenimiento</td>
+                            <td>Pagos mensuales por área</td>
+                            <td class="highlight-virtual">Q0.00</td>
+                        </tr>
+                        <tr>
+                            <td>Flexibilidad</td>
+                            <td>Contratos forzosos (1-3 años)</td>
+                            <td class="highlight-virtual">Mes a mes / Anual</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2>Beneficios de las Oficinas Virtuales en Guatemala</h2>
             <p>
-              Con nuestro servicio de <a href="https://www.oficinasvirtualesguatemala.com/">oficina virtual</a> en <strong><a href="https://www.zonapradera.com" target="_blank">Zona Pradera</a></strong>, usted no solo cumple con un trámite burocrático, sino que dota a su nueva empresa de una identidad corporativa sólida.
-            </p>
-            <p>
-              Para activar su RTU Digital, la SAT verifica que la dirección esté geoposicionada. Nosotros le proporcionamos una ubicación exacta para que obtenga sus documentos legales de forma rápida.
-            </p>
-            <h3>Habilite sus Facturas Electrónicas (FEL) sin demoras</h3>
-            <p>
-                La SAT solo autoriza la facturación a empresas que tienen un domicilio fiscal validado. Al usar nuestras oficinas, usted garantiza que este proceso sea fluido.
-            </p>
-            <h3>Genere confianza en los bancos del país</h3>
-            <p>
-                Contar con un domicilio en un edificio de prestigio como Zona Pradera facilita que le abran las puertas a créditos y servicios financieros.
-            </p>
-            <h3>Proteja la privacidad de su hogar y su familia</h3>
-            <p>
-                Separe su vida personal de la laboral. Si recibe una inspección de la SAT, esta se atenderá en una oficina profesional.
-            </p>
-            <h3>Proyecte la imagen de una empresa sólida</h3>
-            <p>
-                Una dirección fiscal en una zona corporativa de alto nivel le permite competir en mejores condiciones ante sus proveedores y clientes.
+                Optar por <strong>oficinas virtuales</strong> le permite mantener una presencia de alto nivel sin los gastos operativos de una oficina física. Esto es ideal para profesionales que buscan <strong>oficinas guatemala</strong> con servicios de recepción, salas de reuniones bajo demanda y una dirección de prestigio.
             </p>
         </section>
 
         <section id="contacto" class="container" style="padding: 60px 20px;">
           <div style="background: var(--white); border-radius: 32px; padding: 40px; border: 1px solid #e2e8f0; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05); display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; align-items: center;">
             <div>
-              <h4 style="font-size: 2rem; color: var(--navy); margin-bottom: 15px;">Cotice el domicilio fiscal de su empresa.</h4>
-              <p style="color: var(--slate); font-size: 1.1rem;">Obtenga su domicilio fiscal y comercial hoy mismo.</p>
-              <ul style="list-style: none; padding: 0; color: var(--slate); font-size: 0.95rem;">
-                <li style="margin-bottom: 10px;">✅ Entrega de contrato inmediata.</li>
-                <li style="margin-bottom: 10px;">✅ Respaldo para inscripción de sociedades.</li>
-                <li style="margin-bottom: 10px;">✅ Recepcionista profesional incluida.</li>
-              </ul>
+              <h4 style="font-size: 2rem; color: var(--navy); margin-bottom: 15px;">Cotice su oficina ahora.</h4>
+              <p style="color: var(--slate); font-size: 1.1rem;">Ahorre hasta un 80% en gastos operativos comparado con un alquiler tradicional.</p>
             </div>
             <form id="contact-form" autocomplete="off" style="display: flex; flex-direction: column; gap: 15px;">
               <input type="text" name="nombre" required placeholder="Nombre completo" style="padding: 14px; border: 1.5px solid #cbd5e1; border-radius: 10px; font-family: inherit;">
               <input type="tel" name="telefono" required placeholder="WhatsApp / Teléfono" style="padding: 14px; border: 1.5px solid #cbd5e1; border-radius: 10px; font-family: inherit;">
-              
-              <div style="display: flex; flex-direction: column; gap: 5px;">
-                  <label for="plan-select" style="font-size: 0.9rem; font-weight: 600; color: #1e293b;">Seleccione su Plan:</label>
-                  <select id="plan-select" name="plan" required style="padding: 14px; border: 1.5px solid #cbd5e1; border-radius: 10px; font-family: inherit; background: white;">
-                    <option value="" disabled selected>Elija su mejor opción...</option>
-                    <option value="Comercial">Plan essential - Q150</option>
-                    <option value="Basica">Plan Comercial - Q375</option>
-                    <option value="E-Office">Plan ejecutivo - Q575</option>
-                    <option value="Premium">Plan VIP - Q750</option>
-                  </select>
-                </div>
-              <textarea name="mensaje" placeholder="¿Desea agregar algún detalle?" rows="2" style="padding: 14px; border: 1.5px solid #cbd5e1; border-radius: 10px; font-family: inherit; resize: none;"></textarea>
               <button type="submit" id="submit-btn" class="btn" style="margin-top: 5px; width: 100%; border: none; cursor: pointer;">Solicitar Cotización</button>
               <p id="form-status" style="display:none; text-align:center; margin-top:10px; color: #1d4ed8;">Enviando...</p>
             </form>
