@@ -6,9 +6,7 @@ const description = "Alquilamos Oficinas Virtuales en Guatemala para fortalecer 
 ---
 
 <Layout title={title} description={description}>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKG9SKMT"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <script type="application/ld+json" is:inline>
+    <script type="application/ld+json" is:inline slot="structured-data">
     {
       "@context": "https://schema.org",
       "@graph": [
@@ -54,6 +52,9 @@ const description = "Alquilamos Oficinas Virtuales en Guatemala para fortalecer 
       ]
     }
     </script>
+
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TKG9SKMT"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
     <style is:inline>
         :root {
@@ -94,7 +95,6 @@ const description = "Alquilamos Oficinas Virtuales en Guatemala para fortalecer 
         footer { background: var(--navy); color: #e2e8f0; padding: 60px 20px; text-align: center; margin-top: 50px; }
         .wa-float { position: fixed; bottom: 35px; right: 35px; background: var(--success); width: 65px; height: 65px; border-radius: 20px; display: flex; align-items: center; justify-content: center; color: white; z-index: 2000; box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
 
-        /* FAQ STYLES */
         .faq-section { padding: 4rem 1rem; background: #f9f9f9; }
         .faq-grid { max-width: 900px; margin: 0 auto; }
         details { background: white; margin-bottom: 1rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
