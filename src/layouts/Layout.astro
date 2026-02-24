@@ -2,10 +2,9 @@
 interface Props {
 	title: string;
 	description: string;
-	structuredData?: string; 
 }
 
-const { title, description, structuredData } = Astro.props;
+const { title, description } = Astro.props;
 const canonicalURL = ("https://www.oficinasvirtualesguatemala.com" + Astro.url.pathname).replace(/\/$/, "");
 ---
 
@@ -19,16 +18,19 @@ const canonicalURL = ("https://www.oficinasvirtualesguatemala.com" + Astro.url.p
 		<meta name="description" content={description} />
 		<link rel="canonical" href={canonicalURL} />
 
-		{structuredData && (
-			<script type="application/ld+json" set:html={structuredData} />
-		)}
+		<slot name="structured-data" />
 
 		<script is:inline>
-			(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-			})(window,document,'script','dataLayer','GTM-TKG9SKMT');
+			function loadGTM() {
+				if (window.gtmLoaded) return;
+				window.gtmLoaded = true;
+				(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+				new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+				j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+				'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+				})(window,document,'script','dataLayer','GTM-TKG9SKMT');
+			}
+			['touchstart', 'scroll', 'mousemove'].forEach(ev => window.addEventListener(ev, loadGTM, {once:true, passive:true}));
 		</script>
 	</head>
 	<body>
