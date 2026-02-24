@@ -266,4 +266,13 @@ const description = "Establezca su dirección fiscal en Zona Pradera con el resp
             const errorData = await response.json();
             alert("Hubo un error: " + (errorData.errors[0].message || "No se pudo enviar"));
             btn.disabled = false;
-            status.style.display = "none
+            status.style.display = "none";
+          }
+        } catch (error) {
+          alert("Error de conexión. Intente de nuevo.");
+          btn.disabled = false;
+          status.style.display = "none";
+        }
+      });
+    </script>
+</Layout>

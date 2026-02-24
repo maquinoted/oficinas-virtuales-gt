@@ -22,6 +22,8 @@ const canonicalURL = ("https://www.oficinasvirtualesguatemala.com" + Astro.url.p
 		<meta name="description" content={description} />
 		<link rel="canonical" href={canonicalURL} />
 
+		<slot name="structured-data" />
+
 		<script is:inline>
 			function loadGTM() {
 				if (window.gtmLoaded) return;
@@ -34,8 +36,7 @@ const canonicalURL = ("https://www.oficinasvirtualesguatemala.com" + Astro.url.p
 				})(window,document,'script','dataLayer','GTM-TKG9SKMT');
 			}
 
-			// Solo cargar ante acciones físicas directas. 
-			// Se elimina setTimeout para que PageSpeed no lo detecte en su análisis estático.
+			// Solo cargar ante acciones físicas directas para no afectar el puntaje de JS sin usar
 			['touchstart', 'scroll', 'mousemove', 'keydown'].forEach(event => {
 				window.addEventListener(event, loadGTM, { once: true, passive: true });
 			});
